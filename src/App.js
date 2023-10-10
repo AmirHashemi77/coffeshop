@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => {
   return (
-    <div>
+    <div className='font-leiko text-5xl '>
       Hi
     </div>
   );

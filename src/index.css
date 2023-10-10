@@ -1,3 +1,31 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'leiko';
+    src: url("../public/fonts/Leiko/Leiko-Regular.otf");  
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: 'dancingScript';
+    src: url("../public/fonts/DancingScript/DancingScript-Regular.ttf");  
+    font-weight: 400;
+  }
+@font-face {
+    font-family: 'dancingScript';
+    src: url("../public/fonts/DancingScript/DancingScript-Medium.ttf");  
+    font-weight: 500;
+  }
+
+@font-face {
+    font-family: 'dancingScript';
+    src: url("../public/fonts/DancingScript/DancingScript-SemiBold.ttf");  
+    font-weight:600 ;
+  }
+@font-face {
+    font-family: 'dancingScript';
+    src: url("../public/fonts/DancingScript/DancingScript-Bold.ttf");  
+    font-weight: 700;
+  }
