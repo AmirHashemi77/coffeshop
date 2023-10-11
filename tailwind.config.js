@@ -13,6 +13,9 @@ module.exports = {
       fontFamily:{
         'leiko':['leiko','sans'],
         'dancingScript':['dancingScript','sans']
+      },
+      fontSize:{
+        '2xs':'0.5rem'
       }
     },
   },
