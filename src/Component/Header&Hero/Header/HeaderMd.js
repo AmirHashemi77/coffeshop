@@ -1,11 +1,10 @@
 import React from 'react';
-import MdBackground from '../MdBackground';
 import AccountIcon from '../../../icons/AccountIcon';
 import CartIcon from '../../../icons/CartIcon';
 
 const HeaderMd = () => {
     return (
-        <header className='flex items-center justify-between h-16'>
+        <header className='flex items-center justify-between h-[10%]'>
         <div className='flex items-center justify-between w-1/2 px-5'>
             <img src="/images/logo.png" alt="logo" />
             <div className='flex items-center gap-3'>
