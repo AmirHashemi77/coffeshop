@@ -4,6 +4,7 @@ import HeroSm from './Component/Header&Hero/Hero/HeroSm';
 import HeaderMd from './Component/Header&Hero/Header/HeaderMd';
 import MdBackground from './Component/Header&Hero/MdBackground';
 import HeroMd from './Component/Header&Hero/Hero/HeroMd';
+import CardSlider from './Component/CardSlider/CardSlider';
 
 
 
@@ -24,6 +25,7 @@ const App = () => {
       </div>
 
       {/* card slider */}
+      <CardSlider/>
     </>
   );
 };
