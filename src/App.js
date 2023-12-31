@@ -11,16 +11,19 @@ import HeroMd from './Component/Header&Hero/Hero/HeroMd';
 const App = () => {
   return (
     <>
-      <div className='flex flex-col items-center bg-hero md:hidden'>
+
+      {/* header and hero in home page */}
+      <div className='flex flex-col items-center bg-hero lg:hidden'>
           <HeaderSm/>
           <HeroSm/>
       </div>
-      <div className='hidden relative md:block w-full h-screen'>
+      <div className='hidden relative lg:block w-full h-screen'>
         <HeaderMd/>
         <HeroMd/>
         <MdBackground/>
       </div>
-     
+
+      {/* card slider */}
     </>
   );
 };
