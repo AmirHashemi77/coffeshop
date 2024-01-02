@@ -16,7 +16,11 @@ module.exports = {
       },
       fontSize:{
         '2xs':'0.5rem'
-      }
+      },
+      screens: {
+        
+        'md2': '480px', // min-width
+      },
     },
   },
   plugins: [

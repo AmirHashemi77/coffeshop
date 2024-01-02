@@ -4,8 +4,8 @@ import HeroSm from './Component/Header&Hero/Hero/HeroSm';
 import HeaderMd from './Component/Header&Hero/Header/HeaderMd';
 import MdBackground from './Component/Header&Hero/MdBackground';
 import HeroMd from './Component/Header&Hero/Hero/HeroMd';
-import StoryCard from './Component/CardSlider/StoryCard';
 import StoryCardSlider from './Component/CardSlider/StoryCardSlider';
+import Services from './Component/ServicesSection/Services';
 
 
 
@@ -28,6 +28,9 @@ const App = () => {
 
       {/* card slider */}
       <StoryCardSlider/>
+
+      {/* services section */}
+      <Services/>
     </>
   );
 };
