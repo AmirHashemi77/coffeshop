@@ -3,7 +3,7 @@ import CardHero from './CardHero';
 
 const HeroMd = () => {
     return (
-        <div className='flex relative h-[90%] z-10 pl-10 xl:pl-28'>
+        <div className='flex relative h-[90%] z-10 pl-10 xl:pl-28 '>
 
                 <div className='flex flex-col items-start gap-10 w-1/3'>
                     <h1 className='hero-title font-dancingScript text-6xl capitalize lg:text-7xl xl:text-8xl 2xl:text-8xl'>elza coffee</h1>

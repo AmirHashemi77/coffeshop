@@ -91,3 +91,14 @@
     background: rgba(173, 113, 74, 0.35);
     backdrop-filter: blur(2px);
   }
+  .our-story-border{
+    border-top: 1px solid #A8715C;
+    border-left: 2px solid #A8715C;
+    border-radius: 35px;
+    /* border-image: 
+      linear-gradient(
+        to bottom, 
+        #A8715C, 
+        #221518
+      ) 1 100%; */
+  }
