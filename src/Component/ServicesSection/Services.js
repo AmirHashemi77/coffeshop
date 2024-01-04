@@ -31,7 +31,7 @@ function Services() {
 
 
     return (
-        <div className='w-full mb-20'>
+        <div className='w-full mb-20 relative'>
             <div className='w-full max-w-7xl mx-auto'>
                 <div className='flex flex-col items-center gap-16'>
                     <h4 className='section-title'>Services</h4>
@@ -44,6 +44,9 @@ function Services() {
                     </div>
                 </div>
 
+            </div>
+            <div className='hidden absolute -bottom-24 right-0 rotate-180 md:block'>
+                <img src="/images/icon/bg-cofe.svg" alt="" />
             </div>
         </div>
     );
