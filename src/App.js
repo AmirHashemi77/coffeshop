@@ -6,6 +6,7 @@ import MdBackground from './Component/Header&Hero/MdBackground';
 import HeroMd from './Component/Header&Hero/Hero/HeroMd';
 import StoryCardSlider from './Component/CardSlider/StoryCardSlider';
 import Services from './Component/ServicesSection/Services';
+import OfferSection from './Component/OfferSection/OfferSection';
 
 
 
@@ -31,6 +32,12 @@ const App = () => {
 
       {/* services section */}
       <Services/>
+
+
+
+      {/* offer section */}
+
+      <OfferSection/>
     </>
   );
 };

@@ -13,9 +13,9 @@ import StoryCard from './StoryCard';
 
 const StoryCardSlider = () => {
     return (
-        <div className='w-full px-5 my-16 relative md:my-32'>
-            <div className='max-w-7xl mx-auto'>
-                <Swiper pagination={{clickable:true}} modules={[Pagination]} className="mySwiper" style={{
+        <div className='w-full my-16 relative md:my-32'>
+            <div className='max-w-7xl mx-auto px-7'>
+                <Swiper pagination={{clickable:true}}  modules={[Pagination]} className="mySwiper" style={{
                 "--swiper-pagination-color": "#D7B0A0",
                 "--swiper-pagination-bullet-inactive-color": "#744F40",
                 "--swiper-pagination-bullet-size": "16px",
