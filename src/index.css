@@ -127,7 +127,7 @@
       ) 1 100%; */
   }
   .section-title{
-    @apply font-dancingScript text-4xl text-[#F8E4BE] ;
+    @apply font-dancingScript text-4xl text-[#F8E4BE] text-center;
   }
 
   .bg-btn{
@@ -135,4 +135,12 @@
   }
   .bg-btn2{
     background: rgba(247, 225, 188, 0.30);
+  }
+  .form-input{
+    padding: 14px 24px 14px 12px;
+    border-radius: 12px;
+    @apply placeholder:text-[#9D8781] placeholder:font-leiko placeholder:text-base md2:placeholder:text-xl w-full 
+  }
+  .form-input:focus{
+    outline: none;
   }

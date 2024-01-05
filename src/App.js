@@ -7,6 +7,7 @@ import HeroMd from './Component/Header&Hero/Hero/HeroMd';
 import StoryCardSlider from './Component/CardSlider/StoryCardSlider';
 import Services from './Component/ServicesSection/Services';
 import OfferSection from './Component/OfferSection/OfferSection';
+import ReservForm from './Component/ReservForm/ReservForm';
 
 
 
@@ -26,18 +27,14 @@ const App = () => {
         <HeroMd/>
         <MdBackground/>
       </div>
-
       {/* card slider */}
       <StoryCardSlider/>
-
       {/* services section */}
       <Services/>
-
-
-
       {/* offer section */}
-
       <OfferSection/>
+      {/* reserv a table */}
+      <ReservForm/>
     </>
   );
 };
