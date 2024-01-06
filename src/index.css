@@ -144,3 +144,40 @@
   .form-input:focus{
     outline: none;
   }
+
+
+  .product-slider{
+    display: grid;
+    width: 100%;
+    grid-auto-flow: column;  
+    grid-auto-columns: 100%;         
+    grid-template-columns: repeat(1,100%);
+    gap: 36px;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+  }
+  .product-slider::-webkit-scrollbar{
+    display: none;
+  }
+   @screen md {
+    .product-slider{
+      grid-template-columns: repeat(2,calc(50% - 8px));
+      grid-auto-columns: calc(50% - 8px);         
+    }
+  }
+   @screen lg {
+    .product-slider{
+      grid-template-columns: repeat(3,calc(33.33% - 20px));
+      grid-auto-columns: calc(33.33% - 20px);          
+    }
+  }
+  .product-slider-card-bottom{
+    border-radius: 0px 0px 35px 35px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 27px 10px;
+    @apply flex items-center justify-center fixed bottom-0 left-0 w-full
+  }
+  
+  

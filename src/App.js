@@ -8,6 +8,7 @@ import StoryCardSlider from './Component/CardSlider/StoryCardSlider';
 import Services from './Component/ServicesSection/Services';
 import OfferSection from './Component/OfferSection/OfferSection';
 import ReservForm from './Component/ReservForm/ReservForm';
+import RecommendedSection from './Component/RecommendedSection /RecommendedSection';
 
 
 
@@ -35,6 +36,8 @@ const App = () => {
       <OfferSection/>
       {/* reserv a table */}
       <ReservForm/>
+      {/* recommended section */}
+      <RecommendedSection/>
     </>
   );
 };
