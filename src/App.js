@@ -9,6 +9,7 @@ import Services from './Component/ServicesSection/Services';
 import OfferSection from './Component/OfferSection/OfferSection';
 import ReservForm from './Component/ReservForm/ReservForm';
 import RecommendedSection from './Component/RecommendedSection /RecommendedSection';
+import PopularMenu from './Component/PopularMenu/PopularMenu';
 
 
 
@@ -38,6 +39,8 @@ const App = () => {
       <ReservForm/>
       {/* recommended section */}
       <RecommendedSection/>
+      {/* popular menu */}
+      <PopularMenu/>
     </>
   );
 };

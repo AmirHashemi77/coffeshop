@@ -2,10 +2,10 @@ import React from 'react';
 
 const ReservForm = () => {
     return (
-        <div className='w-full relative bg-card-slider2 !rounded-none my-16 md:my-56'>
+        <div className='w-full relative bg-card-slider2 !rounded-none my-16 md:my-56 '>
             <div className='w-full max-w-7xl mx-auto p-7'>
                 <h4 className='section-title text-shadow absolute z-10 left-1/2 -translate-x-1/2 -top-6 md:text-5xl md:-top-8'>Reserve a Table</h4>
-                <div className='flex flex-col items-center justify-between w-full md:flex-row md:pt-5'>
+                <div className='flex flex-col items-center justify-between w-full md:flex-row md:pt-5 over'>
                     <img src="/images/Reserve Img.png" alt=""  className='w-full md:w-1/3'/>
                     <form className='flex flex-col items-center md:grid md:grid-cols-12 gap-x-9 gap-y-8 w-full px-5 mt-10 md:w-2/3'>
                             <div className='flex items-center col-start-1 col-end-13 bg-white w-full border border-[#D6D6D6] rounded-xl px-3'>
@@ -37,7 +37,7 @@ const ReservForm = () => {
 
                 </div>
             </div>
-            <div className='hidden absolute -bottom-0 -right-3 rotate-180 md:block z-0'>
+            <div className='hidden absolute -bottom-0 -right-0 rotate-180 md:block z-0'>
                 <img src="/images/icon/bg-cofe2.svg" alt="" />
             </div>
         </div>
