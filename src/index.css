@@ -268,3 +268,29 @@
 .our-blog-bg{
   background: url('/public/images/Bg\ Of\ blog.png'),#53362A;
 }
+
+
+
+
+
+.blogs-slider{
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;  
+  grid-auto-columns: 100%;         
+  grid-template-columns: repeat(1,100%);
+  gap: 30px;
+  align-items: center;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+.blogs-slider::-webkit-scrollbar{
+  display: none;
+}
+ @screen md {
+  .blogs-slider{
+    grid-template-columns: repeat(2,calc(40%));
+    grid-auto-columns: calc(40%);         
+  }
+}
