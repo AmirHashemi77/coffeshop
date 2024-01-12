@@ -294,3 +294,13 @@
     grid-auto-columns: calc(40%);         
   }
 }
+
+.bg-footer{
+  background: url('/public/images/Bg\ footer.png') center center no-repeat, rgba(173, 113, 74, 0.35) center center no-repeat ;
+  background-size: cover;
+}
+.img-footer{
+  width: 323.048px;
+height: 473.548px;
+
+}

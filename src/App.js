@@ -11,6 +11,8 @@ import ReservForm from './Component/ReservForm/ReservForm';
 import RecommendedSection from './Component/RecommendedSection /RecommendedSection';
 import PopularMenu from './Component/PopularMenu/PopularMenu';
 import OurBlog from './Component/OurBlog/OurBlog';
+import EmailSection from './Component/EmailInput/EmailSection';
+import Footer from './Component/Footer/Footer';
 
 
 
@@ -44,6 +46,10 @@ const App = () => {
       <PopularMenu/>
       {/* our blog */}
       <OurBlog/>
+      {/* email section */}
+      <EmailSection/>
+      {/* footer */}
+      <Footer/>
 
     </>
   );
