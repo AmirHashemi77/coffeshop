@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import BlogItem from './BlogItem';
 
 const OurBlog = () => {
     const slider=useRef()
     const blogItem=useRef()
-    const blogItemWidth=(width)=>{
+    const blogItemWidth=useCallback((width)=>{
         blogItem.current=width
-    }
+    },[])
     const nextBtn=()=>{
         slider.current.scrollLeft+=blogItem.current
     }
