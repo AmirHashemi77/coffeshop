@@ -4,7 +4,7 @@ const StoryCard = () => {
     return (
         
             
-                <div className='flex flex-col items-center justify-between w-full card-border-left px-5 my-12 mx-auto pt-7 relative bg-card-slider md:flex-row md:pt-0'>
+                <div className='flex flex-col items-center justify-between w-full card-border-left card-border-top px-5 my-12 mx-auto pt-7 relative bg-card-slider md:flex-row md:pt-0'>
                     <h4 className='section-title text-shadow absolute z-10 right-11 -top-6 md:text-5xl md:-top-8'>Our Story</h4>
                     <img src="/images/Image-ourstory.png" alt="" className='md:max-h-96 md:absolute md:-top-16'/>
                     <div className='hidden w-1/2 h-full md:block lg:w-1/3'></div>

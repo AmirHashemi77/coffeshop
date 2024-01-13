@@ -106,16 +106,29 @@
     backdrop-filter: blur(2px);
   }
   .card-border-left{
-    border-top: 1px solid #A8715C;
-    border-left: 2px solid #A8715C;
+    position: relative;
+    border-top: 1px solid transparent; 
+    border-left: 2px solid transparent;
     border-radius: 35px;
-    /* border-image: 
-      linear-gradient(
-        to bottom, 
-        #A8715C, 
-        #221518
-      ) 1 100%; */
+    
+      
   }
+  .card-border-left::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    margin: -1px -2px;
+    background: linear-gradient(
+      to bottom, 
+      #A8715C, 
+      #221518
+    ) 1 100%;
+    
+  }
+
+  
   .card-border-right{
     border-top: 1px solid #A8715C;
     border-right: 2px solid #A8715C;

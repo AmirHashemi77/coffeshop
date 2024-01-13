@@ -5,7 +5,7 @@ const Footer = () => {
         <footer className='w-full mt-56 bg-footer relative py-3 '>
             <div className='max-w-7xl mx-auto'>
                     <div className='flex flex-col items-center justify-between md:flex-row'>
-                        <div className='flex items-center justify-center img-footer p-5 md:p-0'>
+                        <div className='flex items-center justify-center img-footer scale-90 xl:scale-100'>
                             <img src="/images/Footer Img.png" alt="" className='md:-translate-y-16'/>
                         </div>
                         <div className='flex items-center justify-between flex-1 flex-wrap gap-y-10'>
@@ -46,11 +46,20 @@ const Footer = () => {
                                 </ul>
                         </div>
                     </div>
-                    <div className='flex flex-col items-center gap-2 mx-auto mt-5 xl:absolute xl:bottom-0 xl:left-1/2 xl:-translate-x-1/2'>
+                    <div className='flex flex-col items-center gap-2 mx-auto mt-5 xl:absolute xl:bottom-3 xl:left-1/2 xl:-translate-x-1/2'>
                         <p className='capitalize font-leiko text-sm text-center text-[#fff3e0a6]'>Created By Elinaui9 </p>
                         <p className='capitalize font-leiko text-sm text-center text-[#fff3e0a6]'>Copyright 2023 Eliza Coffee . All rights reserved.</p>
                     </div>
                 
+            </div>
+
+            <div className='absolute -top-8 right-4'>
+                <div className='flex items-center gap-3'>
+                    <span className='capitalize text-[#FFF3E0] text-base font-leiko'>social media: </span>
+                    <a href="/"><img src="/images/icon/linkedin-icon.svg" alt="" /></a>
+                    <a href="/"><img src="/images/icon/pintrest-icon.svg" alt="" /></a>
+                    <a href="/"><img src="/images/icon/instagram-icon.svg" alt="" /></a>
+                </div>
             </div>
             
         </footer>
