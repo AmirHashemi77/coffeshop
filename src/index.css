@@ -58,8 +58,36 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221518",endColorstr="#745f58",GradientType=1);
   }
   .bg-cart-hero{
-    background: rgba(74, 39, 33, 0.85);
+    background: #4a2721d9;
+    backdrop-filter: blur(16.969467163085938px);
+    border-top: 3px solid #A8715C;
+    border-left: 3px solid #A8715C;
+    
+   
   }
+  /* .bg-cart-hero::after{
+    content: '';
+    position: absolute;
+    width: calc(100% - 7.542px); 
+    height: 3.771px; 
+    top: 0px;
+    left: 0;
+    background: rgb(168,113,92);
+    background: linear-gradient(90deg, rgba(168,113,92,1) 10%, rgba(74,39,33,0.85) 54%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a8715c",endColorstr="#4a2721",GradientType=1);
+    border-radius: 50px 50px 0 0;
+  }
+  .bg-cart-hero::before{
+    content: '';
+    position: absolute;
+    height: calc(100% - 7.542px); 
+    width: 3.771px; 
+    top: 0px;
+    background: rgb(168,113,92);
+    background: linear-gradient(180deg, rgba(168,113,92,1) 10%, rgba(74,39,33,0.85) 54%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a8715c",endColorstr="#4a2721",GradientType=1);
+    border-radius: 50px 0 0 0;
+  } */
   .bg-text{
     background: linear-gradient(251deg, #E0A872 13.76%, #F8E4BE 49.91%, #FFF3E0 58.47%, #E0A872 95.09%);
     -webkit-background-clip: text;
@@ -316,4 +344,11 @@
   width: 323.048px;
 height: 473.548px;
 
+}
+
+
+
+
+.hero-card{
+  width: calc(18.33vw + 10vw);
 }
