@@ -27,8 +27,8 @@ const App = () => {
           <HeaderSm/>
           <HeroSm/>
       </div>
-      <div className='hidden relative lg:block w-full h-screen'>
         <HeaderMd/>
+      <div className='hidden  lg:block w-full h-screen'>
         <HeroMd/>
         <MdBackground/>
       </div>

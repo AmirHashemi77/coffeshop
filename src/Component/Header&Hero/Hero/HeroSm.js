@@ -20,8 +20,8 @@ const HeroSm = () => {
                     search for your coffee now
                 </p>
                 <div className='flex items-center space-x-3'>
-                    <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize md:text-[2vw] md:py-4 md:px-4 md:rounded-full'>calaog</button>
-                    <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize md:text-[2vw] md:py-4 md:px-4 md:rounded-full'>shop now</button>
+                    <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn md:text-[2vw] md:py-4 md:px-4 md:rounded-full'>calaog</button>
+                    <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn md:text-[2vw] md:py-4 md:px-4 md:rounded-full'>shop now</button>
                 </div>
             </div>
 

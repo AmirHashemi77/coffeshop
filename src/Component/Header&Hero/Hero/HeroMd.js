@@ -3,7 +3,7 @@ import CardHero from './CardHero';
 
 const HeroMd = () => {
     return (
-        <div className='flex relative h-[90%] z-10 pl-10 xl:pl-28 '>
+        <div className='flex relative h-[92%] z-10 pl-10 xl:pl-28 '>
 
                 <div className='flex flex-col items-start gap-10 w-1/3'>
                     <h1 className='hero-title font-dancingScript text-6xl capitalize lg:text-7xl xl:text-8xl 2xl:text-8xl'>elza coffee</h1>
@@ -12,8 +12,8 @@ const HeroMd = () => {
                         search for your coffee now
                     </p>
                     <div className='flex items-center space-x-3'>
-                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize lg:text-2xl lg:px-7'>calaog</button>
-                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize lg:text-2xl lg:px-7'>shop now</button>
+                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>calaog</button>
+                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>shop now</button>
                     </div>
                 </div>
               <div className='relative w-full  h-full flex-1'>
