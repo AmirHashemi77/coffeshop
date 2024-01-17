@@ -13,12 +13,12 @@ const HeaderMd = () => {
             </div>
         </div>
         <ul className='flex items-center justify-between w-1/2 h-full px-3  z-10'>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl active-link-header '>home</li>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>menu</li>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>services</li>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>product</li>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>blog</li>
-            <li className='flex items-center justify-center text-base font-leiko text-[#FFF8E8] capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>contact</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl active-link-header '>home</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>menu</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>services</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>product</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>blog</li>
+            <li className='flex items-center justify-center text-base font-leiko text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl'>contact</li>
         </ul>
 
     </header>

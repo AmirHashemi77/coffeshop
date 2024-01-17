@@ -100,6 +100,10 @@
   }
   .btn{
    border: 1px solid #E0A872;
+   transition: all .5s ease;
+  }
+  .btn:hover{
+    opacity: .7;
   }
   .hero-title{
     -webkit-text-stroke-color: #E0A872;
@@ -134,9 +138,8 @@
     backdrop-filter: blur(2px);
   }
   .card-border-left{
-    position: relative;
-    border-top: 1px solid transparent; 
-    border-left: 2px solid transparent;
+    border-top: 1px solid #A8715C;
+    border-left: 2px solid #A8715C;
     border-radius: 35px;
     
       
@@ -169,7 +172,7 @@
       ) 1 100%; */
   }
   .section-title{
-    @apply font-dancingScript text-4xl text-[#F8E4BE] text-center;
+    @apply font-dancingScript text-4xl text-brown1 text-center;
   }
 
   .bg-btn{
@@ -181,7 +184,7 @@
   .form-input{
     padding: 14px 24px 14px 12px;
     border-radius: 12px;
-    @apply placeholder:text-[#9D8781] placeholder:font-leiko placeholder:text-base md2:placeholder:text-xl w-full 
+    @apply placeholder:text-brown2 placeholder:font-leiko placeholder:text-base md2:placeholder:text-xl w-full 
   }
   .form-input:focus{
     outline: none;
@@ -346,9 +349,3 @@ height: 473.548px;
 
 }
 
-
-
-
-.hero-card{
-  width: calc(18.33vw + 10vw);
-}

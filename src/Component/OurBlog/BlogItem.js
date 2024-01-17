@@ -8,7 +8,7 @@ const BlogItem = ({blogItemWidth}) => {
 
 
     return (
-        <div ref={cardWidth} className='bg-[#997D6C] px-12 py-5 rounded-[35px]'>
+        <div ref={cardWidth} className='bg-brown3 px-12 py-5 rounded-[35px]'>
             <div className='flex flex-col items-start space-y-7'>
                 <h6 className='text-2xl text-white font-leiko capitalize font-normal'>how to make a great coffee</h6>
                 <p className='text-[#F6E5DA] text-sm font-leiko font-normal leading-8 line-clamp-4'>
@@ -37,21 +37,21 @@ const BlogItem = ({blogItemWidth}) => {
                 </div> */}
 
                 {/* <div className='flex flex-col items-center justify-between gap-4 w-full md:flex-row md:items-end md:gap-0'>
-                    <div className='flex items-center gap-8'>
-                        <div className='flex flex-col items-center gap-3'>
-                            <img src="/images/icon/Group 11.svg" alt="" />
-                            <p className='text-[#F8E4BE] font-leiko text-xs capitalize'>50%</p>
+                        <div className='flex items-center gap-8'>
+                            <div className='flex flex-col items-center gap-3'>
+                                <img src="/images/icon/Group 11.svg" alt="" />
+                                <p className='text-brown1 font-leiko text-xs capitalize'>50%</p>
+                            </div>
+                            <div className='flex flex-col items-center gap-3'>
+                                <img src="/images/icon/Group 12.svg" alt="" />
+                                <p className='text-brown1 font-leiko text-xs capitalize'>75%</p>
+                            </div>
+                            <div className='flex flex-col items-center gap-3'>
+                                <img src="/images/icon/Group 10.svg" alt="" />
+                                <p className='text-brown1 font-leiko text-xs capitalize'>100%</p>
+                            </div>
                         </div>
-                        <div className='flex flex-col items-center gap-3'>
-                            <img src="/images/icon/Group 12.svg" alt="" />
-                            <p className='text-[#F8E4BE] font-leiko text-xs capitalize'>75%</p>
-                        </div>
-                        <div className='flex flex-col items-center gap-3'>
-                            <img src="/images/icon/Group 10.svg" alt="" />
-                            <p className='text-[#F8E4BE] font-leiko text-xs capitalize'>100%</p>
-                        </div>
-                    </div>
-                    <button className='text-xl font-leiko text-white underline px-2'>More...</button>
+                        <button className='text-xl font-leiko text-white underline px-2'>More...</button>
                 </div> */}
                 <div className='flex flex-col items-center justify-between gap-4 w-full lg:flex-row lg:items-end lg:gap-0'>
                     <img src="/images/Asset 1@2x 1.png" alt="" />

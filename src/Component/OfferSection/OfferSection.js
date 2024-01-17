@@ -12,7 +12,7 @@ const OfferSection = () => {
                                 <p className='text-white text-xs text-center line-clamp-3 font-leiko font-normal leading-8 md:text-start md:text-sm md:leading-8'>
                                     At our cafe, we take pride in providing our customers with the best coffee around. Our carefully-selected coffees come from some of the most renowned coffee growing regions in the world, ensuring that each cup is unrivaled in flavor and freshness. 
                                 </p>
-                                <button className='btn rounded-3xl py-2 px-3 w-full text-[#F8E4BE] font-leiko capitalize bg-btn2 lg:text-2xl lg:px-7 md:w-auto'>Shop Now</button>
+                                <button className='btn rounded-3xl py-2 px-3 w-full text-brown1 font-leiko capitalize bg-btn2 lg:text-2xl lg:px-7 md:w-auto'>Shop Now</button>
                             </div>
                             <img src="/images/product/cea2f73f692d663ab2e2f8cf3ab8cefb.png" alt="product" className='max-w-sm w-64 h-80 md2:w-96 object-contain object-center'/>
                         </div>
