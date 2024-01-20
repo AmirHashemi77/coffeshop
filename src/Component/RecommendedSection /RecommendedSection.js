@@ -1,29 +1,34 @@
-import React, { useRef } from 'react';
+import React, { useCallback, useRef } from 'react';
 import SliderCard from './SliderCard';
 
 
 const products=[
     {
+        id:1,
         title:'arabica',
         subTitle:'dark roast',
         img:'/images/product/1b18a0fb617b2a74ca210364083c4782.png'
     },
     {
+        id:2,
         title:'house blend',
         subTitle:'dark roast',
         img:'/images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
     },
     {
+        id:3,
         title:'Robusta',
         subTitle:'dark roast',
         img:'/images/product/ff10151a8fba4a58a1cc43c532721079.png'
     },
     {
+        id:4,
         title:'house blend',
         subTitle:'dark roast',
         img:'/images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
     },
     {
+        id:5,
         title:'arabica',
         subTitle:'dark roast',
         img:'/images/product/1b18a0fb617b2a74ca210364083c4782.png'
@@ -36,9 +41,9 @@ const RecommendedSection = () => {
     const sliderEl=useRef()
     const card=useRef()
 
-    const cardWidth=(width)=>{
+    const cardWidth=useCallback((width)=>{
         card.current=width
-    }
+    },[]) 
 
     const next=(e)=>{
         // const sliderWidth=sliderEl.current.getBoundingClientRect().width
@@ -58,7 +63,7 @@ const RecommendedSection = () => {
                     <div ref={sliderEl} className='product-slider'>
                         {
                             products.map((item)=>(
-                                <SliderCard imgurl={item.img} title={item.title} subTitle={item.subTitle} cardWidth={cardWidth}/>
+                                <SliderCard key={item.id} imgurl={item.img} title={item.title} subTitle={item.subTitle} cardWidth={cardWidth}/>
                             ))
                         }
                     </div>

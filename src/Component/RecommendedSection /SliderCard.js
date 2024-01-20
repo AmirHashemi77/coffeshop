@@ -4,7 +4,7 @@ const SliderCard = ({imgurl,title,subTitle,cardWidth}) => {
     const cardEl=useRef();
     useEffect(()=>{
        cardWidth(cardEl.current.getBoundingClientRect().width)
-    },[])
+    },[cardWidth])
    
 
     return (

@@ -4,24 +4,26 @@ import CartIcon from '../../../icons/CartIcon';
 
 const HeaderMd = () => {
 
-    const header=useRef();
+    const headerEl=useRef();
+    
 
     document.onwheel=(e)=>{
-        if(window.scrollY>0 && e.deltaY>0){
-            header.current.classList.add('-translate-y-full')
-            header.current.classList.add('active-link-header')
+        const headerHeight=headerEl.current.getBoundingClientRect().height;
+        
+        if(window.scrollY>headerHeight && e.deltaY>0){
+            headerEl.current.classList.add('-translate-y-full')
+            headerEl.current.classList.replace('bg-transparent','bg-header')
         }
-        if(window.scrollY==0){
-            header.current.classList.remove('active-link-header')   
+        if(window.scrollY===0){
+            headerEl.current.classList.replace('bg-header','bg-transparent')  
         }
         if(e.deltaY<0){
-            header.current.classList.remove('-translate-y-full')
-            
+            headerEl.current.classList.remove('-translate-y-full')
         }
         
     }
     return (
-        <header ref={header} className='hidden lg:flex items-center justify-between h-20 sticky top-0 right-0 z-20 duration-500'>
+        <header ref={headerEl} className='hidden lg:flex items-center justify-between h-20 sticky top-0 right-0 z-20 duration-500 bg-transparent'>
         <div className='flex items-center justify-between w-1/2 px-5'>
             <img src="/images/logo.png" alt="logo" />
             <div className='flex items-center gap-3'>

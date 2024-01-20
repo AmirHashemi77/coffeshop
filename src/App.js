@@ -13,7 +13,7 @@ import PopularMenu from './Component/PopularMenu/PopularMenu';
 import OurBlog from './Component/OurBlog/OurBlog';
 import EmailSection from './Component/EmailInput/EmailSection';
 import Footer from './Component/Footer/Footer';
-
+import MenuSm from './Component/Header&Hero/Header/MenuSm';
 
 
 
@@ -27,7 +27,8 @@ const App = () => {
           <HeaderSm/>
           <HeroSm/>
       </div>
-        <HeaderMd/>
+          <MenuSm/>
+          <HeaderMd/>
       <div className='hidden  lg:block w-full h-screen'>
         <HeroMd/>
         <MdBackground/>

@@ -9,19 +9,19 @@ const PopularMenu = () => {
                     <div className='flex items-center justify-center bg-menu w-full py-5'>
                         {/* left menu */}
                         <div className='flex flex-col item-start gap-[6.8vw] 2xl:gap-24'>
-                            <div className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
+                            <div data-aos='left-menu-1' data-aos-duration="1500" data-aos-offset='700' className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>chocolate</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$40.00</span>
                             </div>
-                            <div className='menu-item !flex-row-reverse'>
+                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item flex-row-reverse'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>double es</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$25.00</span>
                             </div>
-                            <div className='menu-item !flex-row-reverse translate-x-[1.527vw] 2xl:translate-x-[23.4547px]'>
+                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item !flex-row-reverse translate-x-[1.527vw] 2xl:translate-x-[23.4547px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>caramel</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$45.00</span>
                             </div>
-                            <div className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
+                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>doppio</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$50.00</span>
                             </div>

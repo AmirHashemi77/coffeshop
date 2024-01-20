@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import CartIcon from '../../../icons/CartIcon';
 import AccountIcon from '../../../icons/AccountIcon';
 import MenuIcon from '../../../icons/MenuIcon';
 
 const HeaderSm = () => {
+    const menuBtn=useRef();
+    
+
+
     return (
         <header className='w-full px-5 py-2'>
             <div className='flex justify-between items-center w-full'>
@@ -11,7 +15,9 @@ const HeaderSm = () => {
                 <div className='flex items-center gap-2'>
                     <AccountIcon/>
                     <CartIcon/>
-                    <MenuIcon/>
+                    <div ref={menuBtn}>
+                        <MenuIcon/>
+                    </div>
                 </div>
             </div>
             

@@ -1,12 +1,7 @@
 import React from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-// import required modules
 import { Pagination } from 'swiper/modules';
 import StoryCard from './StoryCard';
 
@@ -14,7 +9,7 @@ import StoryCard from './StoryCard';
 const StoryCardSlider = () => {
     return (
         <div className='w-full my-16 relative md:my-32'>
-            <div className='max-w-7xl mx-auto px-7'>
+            <div className='max-w-7xl mx-auto px-7' data-aos="fade-up">
                 <Swiper spaceBetween={30} pagination={{clickable:true}} modules={[Pagination]}  className="mySwiper" style={{
                 "--swiper-pagination-color": "#D7B0A0",
                 "--swiper-pagination-bullet-inactive-color": "#744F40",

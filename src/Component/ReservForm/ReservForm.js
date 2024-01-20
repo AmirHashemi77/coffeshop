@@ -6,7 +6,7 @@ const ReservForm = () => {
             <div className='w-full max-w-7xl mx-auto p-7'>
                 <h4 className='section-title text-shadow absolute z-10 left-1/2 -translate-x-1/2 -top-6 md:text-5xl md:-top-8'>Reserve a Table</h4>
                 <div className='flex flex-col items-center justify-between w-full md:flex-row md:pt-5 over'>
-                    <img src="/images/Reserve Img.png" alt=""  className='w-full md:w-1/3'/>
+                    <img src="/images/Reserve Img.png" alt=""  className='w-full md:w-1/3' data-aos="fade-up"/>
                     <form className='flex flex-col items-center md:grid md:grid-cols-12 gap-x-9 gap-y-8 w-full px-5 mt-10 md:w-2/3'>
                             <div className='flex items-center col-start-1 col-end-13 bg-white w-full border border-gray1 rounded-xl px-3'>
                                 <img src="/images/icon/material-symbols_calendar-today-outline-rounded.svg" alt="" />

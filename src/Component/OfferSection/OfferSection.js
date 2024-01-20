@@ -2,7 +2,7 @@ import React from 'react';
 
 const OfferSection = () => {
     return (
-        <div className='w-full my-16 relative md:my-32'>
+        <div className='w-full my-16 relative md:my-32' data-aos="fade-up">
             <div className='max-w-7xl mx-auto px-7'>
                 <div className='w-full card-border-right my-12 mx-auto py-7 relative bg-card-slider2'>
                         <h4 className='section-title text-shadow absolute z-10 left-11 -top-6 md:text-5xl md:-top-8'>Offer</h4>
