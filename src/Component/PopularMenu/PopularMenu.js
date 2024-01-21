@@ -9,19 +9,19 @@ const PopularMenu = () => {
                     <div className='flex items-center justify-center bg-menu w-full py-5'>
                         {/* left menu */}
                         <div className='flex flex-col item-start gap-[6.8vw] 2xl:gap-24'>
-                            <div data-aos='left-menu-1' data-aos-duration="1500" data-aos-offset='700' className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
+                            <div data-aos='left-menu-1' data-aos-duration="1500" data-aos-delay="0" className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>chocolate</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$40.00</span>
                             </div>
-                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item flex-row-reverse'>
+                            <div data-aos='left-menu-2' data-aos-duration="1500" data-aos-delay="100" className='menu-item flex-row-reverse'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>double es</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$25.00</span>
                             </div>
-                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item !flex-row-reverse translate-x-[1.527vw] 2xl:translate-x-[23.4547px]'>
+                            <div data-aos='left-menu-3' data-aos-duration="1500" data-aos-delay="200" className='menu-item !flex-row-reverse translate-x-[1.527vw] 2xl:translate-x-[23.4547px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>caramel</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$45.00</span>
                             </div>
-                            <div  data-aos-duration="1500" data-aos-offset='200' className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
+                            <div data-aos='left-menu-4' data-aos-duration="1500" data-aos-delay="300" className='menu-item !flex-row-reverse translate-x-[5vw] 2xl:translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>doppio</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$50.00</span>
                             </div>
@@ -30,19 +30,19 @@ const PopularMenu = () => {
                         <img src="/images/Popularmenu Img.png" alt="" className='w-[39vw] object-contain object-center -translate-y-[5vw] 2xl:-translate-y-[76.8px]'/>
                         {/* right menu */}
                         <div className='flex flex-col item-start gap-[6.8vw] 2xl:gap-24'>
-                            <div className='menu-item right-menu -translate-x-[5vw] 2xl:-translate-x-[76.8px]'>
+                            <div data-aos='right-menu-1' data-aos-duration="1500" data-aos-delay="0" className='menu-item right-menu -translate-x-[5vw] 2xl:-translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>espersso</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$30.00</span>
                             </div>
-                            <div className='menu-item right-menu'>
+                            <div data-aos='right-menu-2' data-aos-duration="1500" data-aos-delay="100" className='menu-item right-menu'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>cappuccino</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$30.00</span>
                             </div>
-                            <div className='menu-item right-menu -translate-x-[1.527vw] 2xl:-translate-x-[23.4547px]'>
+                            <div data-aos='right-menu-3' data-aos-duration="1500" data-aos-delay="200" className='menu-item right-menu -translate-x-[1.527vw] 2xl:-translate-x-[23.4547px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>mocha</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$25.00</span>
                             </div>
-                            <div className='menu-item right-menu -translate-x-[5vw] 2xl:-translate-x-[76.8px]'>
+                            <div data-aos='right-menu-4' data-aos-duration="1500" data-aos-delay="300" className='menu-item right-menu -translate-x-[5vw] 2xl:-translate-x-[76.8px]'>
                                 <span className='text-brown1 font-dancingScript text-[3.33vw] font-semibold capitalize whitespace-nowrap'>latte</span>
                                 <span className='text-brown1 font-dancingScript text-[1.66vw] font-semibold'>$25.00</span>
                             </div>
