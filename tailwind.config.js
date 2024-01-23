@@ -29,6 +29,7 @@ module.exports = {
         'cream1':'#FFF3E0',
         'cream2':'#FFF8E8',
         'cream3':'#DABB9E',
+        'cream4':'#F0E3D0',
         'gray1':'#D6D6D6'
       }
     },

@@ -214,6 +214,58 @@
       background: radial-gradient(circle, rgba(181,145,131,1) 6%, rgba(109,84,74,1) 71%, rgba(109,84,74,1) 93%);
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b59183",endColorstr="#6d544a",GradientType=1);
     }
+
+    .bg-customer-review{
+      background: url('/public/images//Bg\ customer.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 38.979px;
+    }
+
+    .customer-slider{
+      display: grid;
+      width: 100%;
+      grid-auto-flow: column;  
+      grid-auto-columns: 100%;         
+      grid-template-columns: repeat(1,100%);
+      gap: 19px;
+      align-items: center;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 20px;
+      padding-bottom: 0;
+    }
+    .customer-slider::-webkit-scrollbar{
+      display: none;
+    }
+     @screen md {
+      .customer-slider{
+        grid-template-columns: repeat(2,calc(50% - 8px));
+        grid-auto-columns: calc(50% - 8px);         
+      }
+    }
+     @screen lg {
+      .customer-slider{
+        grid-template-columns: repeat(3,calc(33.33% - 60px));
+        grid-auto-columns: calc(33.33% - 60px);          
+        
+      }
+    }
+
+
+    .customer-card{
+      background: rgba(248, 228, 190, 0.20);
+      backdrop-filter: blur(17.5px);
+      border-radius: 15px 15px 0px 0px;
+      padding: 21px 5px 15px 5px;
+      
+    }
+    .customer-card.active{
+      background: rgba(102, 55, 29, 0.75);
+      backdrop-filter: blur(17.5px);
+    }
+
     
     
  
@@ -329,6 +381,8 @@
     height: 473.548px;
   
   }
+
+
   
   
   }

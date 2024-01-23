@@ -14,6 +14,7 @@ import OurBlog from './Component/OurBlog/OurBlog';
 import EmailSection from './Component/EmailInput/EmailSection';
 import Footer from './Component/Footer/Footer';
 import MenuSm from './Component/Header&Hero/Header/MenuSm';
+import CustomerReview from './Component/CustomerReview /CustomerReview';
 
 
 
@@ -47,6 +48,8 @@ const App = () => {
       <PopularMenu/>
       {/* our blog */}
       <OurBlog/>
+      {/* customer review */}
+      <CustomerReview/>
       {/* email section */}
       <EmailSection/>
       {/* footer */}
