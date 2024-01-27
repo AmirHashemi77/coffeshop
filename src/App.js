@@ -28,7 +28,7 @@ const App = () => {
           <HeaderSm/>
           <HeroSm/>
       </div>
-          <MenuSm/>
+          {/* <MenuSm/> */}
           <HeaderMd/>
       <div className='hidden lg:block w-full h-screen'>
         <HeroMd/>

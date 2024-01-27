@@ -39,6 +39,10 @@
       overflow-x: hidden;
       
     }
+    body{
+      width: 100%;
+      overflow-x: hidden;
+    }
     *{
       margin: 0;
       padding: 0;
@@ -227,8 +231,8 @@
       display: grid;
       width: 100%;
       grid-auto-flow: column;  
-      grid-auto-columns: 100%;         
-      grid-template-columns: repeat(1,100%);
+      grid-auto-columns: 70%;         
+      grid-template-columns: repeat(1,70%);
       gap: 19px;
       align-items: center;
       overflow-x: auto;
@@ -241,8 +245,8 @@
     }
      @screen md {
       .customer-slider{
-        grid-template-columns: repeat(2,calc(50% - 8px));
-        grid-auto-columns: calc(50% - 8px);         
+        grid-template-columns: repeat(2,calc(50% - 60px));
+        grid-auto-columns: calc(50% - 60px);         
       }
     }
      @screen lg {
