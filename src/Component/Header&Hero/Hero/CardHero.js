@@ -9,7 +9,7 @@ const CardHero = () => {
             <h5 className='font-dancingScript text-xs  bg-text whitespace-nowrap capitalize md:text-[1.93vw] md:leading-7 xl:leading-[3vw]'>but first coffee</h5>
             <button className='flex items-center justify-center btn px-2 space-x-1 rounded-3xl'>
                 <span className='font-leiko text-2xs whitespace-nowrap bg-text  capitalize  lg:text-sm'>hurry up</span>
-                <VespaIcon width='25' height='25'/>
+                <VespaIcon/>
             </button>
             
         </div>

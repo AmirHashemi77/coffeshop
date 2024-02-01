@@ -23,7 +23,7 @@ const HeaderMd = () => {
         
     }
     return (
-        <header ref={headerEl} className='hidden lg:flex items-center justify-between h-20 sticky top-0 right-0 z-20 duration-500 bg-transparent'>
+        <header ref={headerEl} className='hidden lg:flex items-center justify-between h-20 sticky top-0 right-0 z-20 duration-500 bg-transparent xl:h24'>
         <div className='flex items-center justify-between w-1/2 px-5'>
             <img src="/images/logo.png" alt="logo" />
             <div className='flex items-center gap-3'>
