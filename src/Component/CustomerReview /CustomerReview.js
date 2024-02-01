@@ -60,7 +60,14 @@ const CustomerReview = () => {
 
 
     useEffect(()=>{
-       slider.current.scrollTo((slider.current.getBoundingClientRect().width)/4.5,0)
+        // if(window.innerWidth>1000){
+
+        //     slider.current.scrollTo((slider.current.getBoundingClientRect().width)/4.5,0)
+        // }else if(window.innerWidth<1000){
+            slider.current.children[2].scrollIntoView({inline: 'center',block:'end'})
+            console.log(slider.current.children[3].offsetLeft);
+
+        // }
 
        setSlideWidth(slider.current.children[0].getBoundingClientRect().width + 19)
     
@@ -74,14 +81,14 @@ const CustomerReview = () => {
            
         //     return;
         // }
-       
+        slider.current.classList.remove('overflow-x-hidden')
         setActiveCardIndex((prev)=>prev+1)
         slider.current.scrollBy(slideWidth,0)
 
         setCustomerReviews((prev)=>{
             return [...prev,prev[addCardAfterNum]];
         })
-
+        slider.current.classList.add('overflow-x-hidden')
 
         setAddCardAfterNum((prev)=>prev+1)
         
@@ -94,8 +101,11 @@ const CustomerReview = () => {
             
             return;
         }
+        slider.current.classList.remove('overflow-x-hidden')
         setActiveCardIndex((prev)=>prev-1)
         slider.current.scrollBy(-slideWidth,0)
+        slider.current.classList.add('overflow-x-hidden')
+
         // setCustomerReviews((prev)=>{
         //     console.log(prev.unshift(prev[prev.length -1]));
         //     return prev;
@@ -117,7 +127,7 @@ const CustomerReview = () => {
                         {/* slider */}
             <div className='max-w-6xl mx-auto relative bg-customer-review'>
                 <h4 className='section-title font-dancingScript font-bold capitalize absolute left-1/2 -top-10 -translate-x-1/2 md:text-6xl'>Customer Review</h4>
-                <div onScroll={(e)=>scrollSlider(e)} ref={slider} className='customer-slider pt-40 relative bottom-0 overflow-y-hidden '>
+                <div onScroll={(e)=>scrollSlider(e)} ref={slider} className='customer-slider pt-40 relative bottom-0 overflow-y-hidden overflow-x-hidden'>
                   {customerReviews.map((item,index)=>(
                     <ReviewItem key={item.id} id={index+1} auther={item.auther} comment={item.comment} img={item.img} activeIndex={activeCardIndex}/>
                   ))}
