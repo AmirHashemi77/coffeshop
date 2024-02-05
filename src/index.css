@@ -33,7 +33,7 @@
 
 
 
-  @layer base{
+  
     html{
       background-color: #221518;
       overflow-x: hidden;
@@ -51,7 +51,7 @@
       background-color: transparent;
       border: none;
     }
-  }
+  
 
 
 
@@ -188,10 +188,12 @@
       overflow-x: auto;
       scroll-behavior: smooth;
       padding: 20px;
+      
     }
     .product-slider::-webkit-scrollbar{
       display: none;
     }
+    
      @screen md {
       .product-slider{
         grid-template-columns: repeat(2,calc(50% - 8px));

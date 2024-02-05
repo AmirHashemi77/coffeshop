@@ -47,7 +47,7 @@ const App = () => {
                   </div>
                       {/* <MenuSm/> */}
                       <HeaderMd/>
-                  <div className='hidden lg:block w-full h-screen'>
+                  <div className='hidden lg:block w-full h-screen min-h-[615px]'>
                     <HeroMd/>
                     <MdBackground/>
                   </div>

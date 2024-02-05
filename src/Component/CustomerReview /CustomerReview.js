@@ -77,10 +77,10 @@ const CustomerReview = () => {
         setCustomerReviews((prev)=>{
             return [...prev,prev[addCardAfterNum]];
         })
-        slider.current.classList.add('overflow-x-hidden')
-
+        
         setAddCardAfterNum((prev)=>prev+1)
         setTimeout(()=>{
+            slider.current.classList.add('overflow-x-hidden')
             nextBtnEl.current.disabled=false
         },400)
     }
