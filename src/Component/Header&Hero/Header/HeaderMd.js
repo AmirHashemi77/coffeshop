@@ -12,14 +12,14 @@ const HeaderMd = () => {
         
         if(window.scrollY>headerHeight && e.deltaY>0){
           
-            // headerEl.current.classList.add('-translate-y-full')
+            headerEl.current.classList.add('-translate-y-full')
             headerEl.current.classList.replace('bg-transparent','bg-header')
         }
         if(window.scrollY===0){
             headerEl.current.classList.replace('bg-header','bg-transparent')  
         }
         if(e.deltaY<0){
-            // headerEl.current.classList.remove('-translate-y-full')
+            headerEl.current.classList.remove('-translate-y-full')
         }
         
     }
