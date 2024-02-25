@@ -95,9 +95,9 @@ const CustomerReview = () => {
         slider.current.classList.remove('overflow-x-hidden')
         setActiveCardIndex((prev)=>prev-1)
         slider.current.scrollBy(-slideWidth,0)
-        slider.current.classList.add('overflow-x-hidden')
-     
+        
         setTimeout(()=>{
+            slider.current.classList.add('overflow-x-hidden')
             prevBtnEl.current.disabled=false
         },400)
 
