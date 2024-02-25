@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/coffeshop/static/css/main.fd89b635.css",
-    "main.js": "/coffeshop/static/js/main.afd442f7.js",
-    "static/media/Bg footer.png": "/coffeshop/static/media/Bg footer.6d1f83905e31de025852.png",
-    "static/media/Bg customer.png": "/coffeshop/static/media/Bg customer.7e845a9b41f5a71b2d9f.png",
-    "static/media/Bg Of blog.png": "/coffeshop/static/media/Bg Of blog.15ef99ded3ebd2d90208.png",
-    "static/media/DancingScript-Medium.ttf": "/coffeshop/static/media/DancingScript-Medium.8a269a5e44015996cd27.ttf",
-    "static/media/DancingScript-SemiBold.ttf": "/coffeshop/static/media/DancingScript-SemiBold.e8406f3ab340a352f3ce.ttf",
-    "static/media/DancingScript-Bold.ttf": "/coffeshop/static/media/DancingScript-Bold.57bdbb733ef4ac8e2df3.ttf",
-    "static/media/DancingScript-Regular.ttf": "/coffeshop/static/media/DancingScript-Regular.5e15416c2d596d51a588.ttf",
-    "static/media/Leiko-Regular.otf": "/coffeshop/static/media/Leiko-Regular.03d81166697b07003638.otf",
-    "index.html": "/coffeshop/index.html",
-    "main.fd89b635.css.map": "/coffeshop/static/css/main.fd89b635.css.map",
-    "main.afd442f7.js.map": "/coffeshop/static/js/main.afd442f7.js.map"
+    "main.css": "./static/css/main.3b57371f.css",
+    "main.js": "./static/js/main.afd442f7.js",
+    "static/media/Bg footer.png": "./static/media/Bg footer.6d1f83905e31de025852.png",
+    "static/media/Bg customer.png": "./static/media/Bg customer.7e845a9b41f5a71b2d9f.png",
+    "static/media/Bg Of blog.png": "./static/media/Bg Of blog.15ef99ded3ebd2d90208.png",
+    "static/media/DancingScript-Medium.ttf": "./static/media/DancingScript-Medium.8a269a5e44015996cd27.ttf",
+    "static/media/DancingScript-SemiBold.ttf": "./static/media/DancingScript-SemiBold.e8406f3ab340a352f3ce.ttf",
+    "static/media/DancingScript-Bold.ttf": "./static/media/DancingScript-Bold.57bdbb733ef4ac8e2df3.ttf",
+    "static/media/DancingScript-Regular.ttf": "./static/media/DancingScript-Regular.5e15416c2d596d51a588.ttf",
+    "static/media/Leiko-Regular.otf": "./static/media/Leiko-Regular.03d81166697b07003638.otf",
+    "index.html": "./index.html",
+    "main.3b57371f.css.map": "./static/css/main.3b57371f.css.map",
+    "main.afd442f7.js.map": "./static/js/main.afd442f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.fd89b635.css",
+    "static/css/main.3b57371f.css",
     "static/js/main.afd442f7.js"
   ]
 }
