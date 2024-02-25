@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.3b57371f.css",
-    "main.js": "./static/js/main.c716cbe7.js",
+    "main.js": "./static/js/main.2451e22b.js",
     "static/media/Bg footer.png": "./static/media/Bg footer.6d1f83905e31de025852.png",
     "static/media/Bg customer.png": "./static/media/Bg customer.7e845a9b41f5a71b2d9f.png",
     "static/media/Bg Of blog.png": "./static/media/Bg Of blog.15ef99ded3ebd2d90208.png",
@@ -12,10 +12,10 @@
     "static/media/Leiko-Regular.otf": "./static/media/Leiko-Regular.03d81166697b07003638.otf",
     "index.html": "./index.html",
     "main.3b57371f.css.map": "./static/css/main.3b57371f.css.map",
-    "main.c716cbe7.js.map": "./static/js/main.c716cbe7.js.map"
+    "main.2451e22b.js.map": "./static/js/main.2451e22b.js.map"
   },
   "entrypoints": [
     "static/css/main.3b57371f.css",
-    "static/js/main.c716cbe7.js"
+    "static/js/main.2451e22b.js"
   ]
 }
