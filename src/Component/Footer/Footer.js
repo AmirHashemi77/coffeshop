@@ -6,7 +6,7 @@ const Footer = () => {
             <div className='max-w-7xl mx-auto'>
                     <div className='flex flex-col items-center justify-between md:flex-row'>
                         <div className='flex items-center justify-center img-footer scale-90 xl:scale-100'>
-                            <img src="/images/Footer Img.png" alt="" className='md:-translate-y-16'/>
+                            <img src="./images/Footer Img.png" alt="" className='md:-translate-y-16'/>
                         </div>
                         <div className='flex items-center justify-between flex-1 flex-wrap gap-y-10'>
                                 <ul className='flex flex-col items-start gap-7 py-5 px-7'>
@@ -30,15 +30,15 @@ const Footer = () => {
                                 <ul className='flex flex-col items-start gap-7 py-5 px-7'>
                                 
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="/images/icon/material-symbols_location-on-rounded.svg" alt="" />
+                                        <img src="./images/icon/material-symbols_location-on-rounded.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>12 jhon Avenue #35 - new York </span>
                                     </li>
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="/images/icon/ic_round-email.svg" alt="" />
+                                        <img src="./images/icon/ic_round-email.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>elizacoffee@coffee.com</span>
                                     </li>
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="/images/icon/ic_outline-phone-android.svg" alt="" />
+                                        <img src="./images/icon/ic_outline-phone-android.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>+1-222-34-eliza</span>
                                     </li>
                                 
@@ -56,9 +56,9 @@ const Footer = () => {
             <div className='absolute -top-8 right-4'>
                 <div className='flex items-center gap-3'>
                     <span className='capitalize text-cream1 text-base font-leiko'>social media: </span>
-                    <a href="/"><img src="/images/icon/linkedin-icon.svg" alt="" /></a>
-                    <a href="/"><img src="/images/icon/pintrest-icon.svg" alt="" /></a>
-                    <a href="/"><img src="/images/icon/instagram-icon.svg" alt="" /></a>
+                    <a href="/"><img src="./images/icon/linkedin-icon.svg" alt="" /></a>
+                    <a href="/"><img src="./images/icon/pintrest-icon.svg" alt="" /></a>
+                    <a href="/"><img src="./images/icon/instagram-icon.svg" alt="" /></a>
                 </div>
             </div>
             

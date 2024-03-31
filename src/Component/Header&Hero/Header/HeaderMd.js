@@ -26,7 +26,7 @@ const HeaderMd = () => {
     return (
         <header ref={headerEl} className='hidden lg:flex items-center justify-between h-20 sticky top-0 left-0 z-30 duration-300 bg-transparent 2xl:h-24'>
         <div className='flex items-center justify-between w-1/2 px-5'>
-            <img src="/images/logo.png" alt="logo" />
+            <img src="./images/logo.png" alt="logo" />
             <div className='flex items-center gap-3'>
                 <AccountIcon/>
                 <CartIcon/>
