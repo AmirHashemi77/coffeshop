@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense } from 'react';
 import HeaderSm from './Component/Header&Hero/Header/HeaderSm';
 import HeroSm from './Component/Header&Hero/Hero/HeroSm';
 import HeaderMd from './Component/Header&Hero/Header/HeaderMd';
@@ -21,25 +21,10 @@ import Spinner from './Component/Spinner/Spinner';
 
 
 const App = () => {
-  const[loading,setLoading]= useState(true)
-
-  useEffect(()=>{
-    setTimeout(() => {
-      setLoading(false)
-      
-    }, 3000);
-  },[])
-  
 
   return (
-    <>
+    <Suspense fallback={<Spinner/>}>
           
-           
-           { loading ?  <Spinner/>  :    
-
-              
-              <>
-
                   {/* header and hero in home page */}
                   <div className='flex flex-col items-center bg-hero lg:hidden'>
                       <HeaderSm/>
@@ -72,15 +57,9 @@ const App = () => {
                   {/* footer */}
                   <Footer/>
             
-              </>
-
-           }
-           
-               
-
-  
-          
-    </>
+    
+        </Suspense>
+         
 
   
   );
