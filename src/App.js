@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useContext } from 'react';
 import HeaderSm from './Component/Header&Hero/Header/HeaderSm';
 import HeroSm from './Component/Header&Hero/Hero/HeroSm';
 import HeaderMd from './Component/Header&Hero/Header/HeaderMd';
@@ -16,21 +16,24 @@ import Footer from './Component/Footer/Footer';
 import MenuSm from './Component/Header&Hero/Header/MenuSm';
 import CustomerReview from './Component/CustomerReview /CustomerReview';
 import Spinner from './Component/Spinner/Spinner';
+import UiContextProvider, { uiContext } from './context/UiContext';
 
 
 
 
 const App = () => {
 
+
+
   return (
     <Suspense fallback={<Spinner/>}>
-          
+          <UiContextProvider>
                   {/* header and hero in home page */}
                   <div className='flex flex-col items-center bg-hero lg:hidden'>
                       <HeaderSm/>
                       <HeroSm/>
                   </div>
-                      {/* <MenuSm/> */}
+                       <MenuSm/>
                       <HeaderMd/>
                   <div className='hidden lg:block w-full h-screen min-h-[615px]'>
                     <HeroMd/>
@@ -57,7 +60,7 @@ const App = () => {
                   {/* footer */}
                   <Footer/>
             
-    
+          </UiContextProvider>
         </Suspense>
          
 
