@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext } from 'react';
 import CartIcon from '../../../icons/CartIcon';
 import AccountIcon from '../../../icons/AccountIcon';
 import MenuIcon from '../../../icons/MenuIcon';

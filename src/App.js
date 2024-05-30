@@ -1,22 +1,14 @@
-import React, { Suspense, useContext } from 'react';
-import HeaderSm from './Component/Header&Hero/Header/HeaderSm';
-import HeroSm from './Component/Header&Hero/Hero/HeroSm';
-import HeaderMd from './Component/Header&Hero/Header/HeaderMd';
-import MdBackground from './Component/Header&Hero/MdBackground';
-import HeroMd from './Component/Header&Hero/Hero/HeroMd';
-import StoryCardSlider from './Component/CardSlider/StoryCardSlider';
-import Services from './Component/ServicesSection/Services';
-import OfferSection from './Component/OfferSection/OfferSection';
-import ReservForm from './Component/ReservForm/ReservForm';
-import RecommendedSection from './Component/RecommendedSection /RecommendedSection';
-import PopularMenu from './Component/PopularMenu/PopularMenu';
-import OurBlog from './Component/OurBlog/OurBlog';
-import EmailSection from './Component/EmailInput/EmailSection';
-import Footer from './Component/Footer/Footer';
-import MenuSm from './Component/Header&Hero/Header/MenuSm';
-import CustomerReview from './Component/CustomerReview /CustomerReview';
-import Spinner from './Component/Spinner/Spinner';
-import UiContextProvider, { uiContext } from './context/UiContext';
+import React from 'react';
+import UiContextProvider from './context/UiContext';
+import { Route, Routes } from 'react-router-dom';
+import Products from './pages/Products';
+import ProductDetails from './pages/ProductDetails';
+import Blogs from './pages/Blogs';
+import BlogDetails from './pages/BlogDetails';
+import NotFound from './pages/NotFound';
+import Home from './pages/Home';
+import Cart from './pages/Cart';
+import AboutUs from './pages/AboutUs';
 
 
 
@@ -26,43 +18,18 @@ const App = () => {
 
 
   return (
-    <Suspense fallback={<Spinner/>}>
-          <UiContextProvider>
-                  {/* header and hero in home page */}
-                  <div className='flex flex-col items-center bg-hero lg:hidden'>
-                      <HeaderSm/>
-                      <HeroSm/>
-                  </div>
-                       <MenuSm/>
-                      <HeaderMd/>
-                  <div className='hidden lg:block w-full h-screen min-h-[615px]'>
-                    <HeroMd/>
-                    <MdBackground/>
-                  </div>
-                  {/* card slider */}
-                  <StoryCardSlider/>
-                  {/* services section */}
-                  <Services/>
-                  {/* offer section */}
-                  <OfferSection/>
-                  {/* reserv a table */}
-                  <ReservForm/>
-                  {/* recommended section */}
-                  <RecommendedSection/>
-                  {/* popular menu */}
-                  <PopularMenu/>
-                  {/* our blog */}
-                  <OurBlog/>
-                  {/* customer review */}
-                  <CustomerReview/>
-                  {/* email section */}
-                  <EmailSection/>
-                  {/* footer */}
-                  <Footer/>
-            
-          </UiContextProvider>
-        </Suspense>
-         
+    <UiContextProvider>
+      <Routes>
+        <Route path='/' element={<Home/>}  />
+        <Route path='/products' element={<Products/>}  />
+        <Route path='/products/:productid' element={<ProductDetails/>}  />
+        <Route path='/blogs' element={<Blogs/>}  />
+        <Route path='/blogs/:blogid' element={<BlogDetails/>}  />
+        <Route path='/aboutus' element={<AboutUs/>}  />
+        <Route path='/Cart' element={<Cart/>}  />
+        <Route path='*' element={<NotFound/>}  />
+      </Routes>
+    </UiContextProvider>
 
   
   );
