@@ -9,7 +9,7 @@ const servicesArr=[
     },
     {
         id:2,
-        title:'type of coffee',
+        title:'type of cofe',
         imgurl:"./images/icon/cofe.svg"
     },
     {

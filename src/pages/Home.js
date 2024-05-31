@@ -10,10 +10,10 @@ import StoryCardSlider from '../Component/CardSlider/StoryCardSlider';
 import Services from '../Component/ServicesSection/Services';
 import OfferSection from '../Component/OfferSection/OfferSection';
 import ReservForm from '../Component/ReservForm/ReservForm';
-import RecommendedSection from '../Component/RecommendedSection /RecommendedSection';
+import RecommendedSection from '../Component/RecommendedSection/RecommendedSection';
 import PopularMenu from '../Component/PopularMenu/PopularMenu';
 import OurBlog from '../Component/OurBlog/OurBlog';
-import CustomerReview from '../Component/CustomerReview /CustomerReview';
+import CustomerReview from '../Component/CustomerReview/CustomerReview';
 import EmailSection from '../Component/EmailInput/EmailSection';
 import Footer from '../Component/Footer/Footer';
 
@@ -53,8 +53,8 @@ const Home = () => {
                   <PopularMenu/>
                   {/* our blog */}
                   <OurBlog/>
-                  {/* customer review */}
                   <CustomerReview/>
+                  {/* customer review */}
                   {/* email section */}
                   <EmailSection/>
                   {/* footer */}

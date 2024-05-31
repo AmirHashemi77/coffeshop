@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react';
 const SliderCard = ({imgurl,title,subTitle,cardWidth}) => {
     const cardEl=useRef();
     useEffect(()=>{
+        if(cardWidth)
        cardWidth(cardEl.current.getBoundingClientRect().width)
     },[cardWidth])
    
