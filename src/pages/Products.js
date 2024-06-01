@@ -68,7 +68,7 @@ const Products = () => {
                     <HeaderMd/>
 
 
-                    <div className='flex flex-col items-center gap-16 w-full mt-36'>
+                    <div className='flex flex-col items-center gap-16 w-full mt-15 md:mt-36'>
                         <h4 className='section-title text-shadow md:text-5xl'>Products</h4>
                         <div className='flex flex-col items-center gap-5 w-full px-5 max-w-7xl relative md:flex-row md:items-start'>
                             <SideBarContainer title='Product Type'>
@@ -104,7 +104,7 @@ const Products = () => {
                                     
                                 </ul>
                             </SideBarContainer>
-                            <List>
+                            <List type='products'>
                                 {
                                     products.map((item)=>(
                                         <SliderCard key={item.id} imgurl={item.img} title={item.title} subTitle={item.subTitle} />

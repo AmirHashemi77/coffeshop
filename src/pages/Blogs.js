@@ -16,9 +16,9 @@ const Blogs = () => {
              <HeaderMd/>
 
 
-             <div className='flex flex-col items-center gap-16 w-full mt-36 px-5 '>
+             <div className='flex flex-col items-center gap-16 w-full mt-15 md:mt-36 px-5 '>
                  <h4 className='section-title text-shadow md:text-5xl'>Blogs</h4>                 
-                     <List>
+                     <List type='blogs'>
                         <BlogItem />
                         <BlogItem />
                         <BlogItem />
