@@ -3,7 +3,9 @@ import React, { useEffect, useRef } from 'react';
 const BlogItem = ({blogItemWidth}) => {
     const cardWidth=useRef()
     useEffect(()=>{
-        blogItemWidth(cardWidth.current.getBoundingClientRect().width);
+        if(blogItemWidth) {
+            blogItemWidth(cardWidth.current.getBoundingClientRect().width);
+        }
     },[blogItemWidth])
 
 
@@ -53,7 +55,7 @@ const BlogItem = ({blogItemWidth}) => {
                         </div>
                         <button className='text-xl font-leiko text-white underline px-2'>More...</button>
                 </div> */}
-                <div className='flex flex-col items-center justify-between gap-4 w-full lg:flex-row lg:items-end lg:gap-0'>
+                <div className='flex flex-col items-center flex-wrap justify-between gap-4 w-full lg:flex-row lg:items-end lg:gap-0'>
                     <img src="./images/Asset 1@2x 1.png" alt="" />
 
                     <button className='text-xl font-leiko text-white underline px-2'>More...</button>
