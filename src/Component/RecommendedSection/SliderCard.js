@@ -13,10 +13,10 @@ const SliderCard = ({imgurl,title,subTitle,cardWidth}) => {
             <div className='flex items-center relative mb-20'>
                 <img src={imgurl} alt="" />
                 <div className='absolute top-5 left-5'>
-                    <img src="./images/icon/ph_info.svg" alt="" />
+                    <img src="/images/icon/ph_info.svg" alt="" />
                 </div>
                 <div className='absolute bottom-5 right-5'>
-                    <img src="./images/icon/ph_shopping-cart-simple-thin.svg" alt="" />
+                    <img src="/images/icon/ph_shopping-cart-simple-thin.svg" alt="" />
                 </div>
             </div>
             <div className='product-slider-card-bottom'>

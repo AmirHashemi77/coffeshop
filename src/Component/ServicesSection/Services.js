@@ -5,27 +5,27 @@ const servicesArr=[
     {
         id:1,
         title:'equipment',
-        imgurl:"./images/icon/icon 1.svg"
+        imgurl:"/images/icon/icon 1.svg"
     },
     {
         id:2,
         title:'type of cofe',
-        imgurl:"./images/icon/cofe.svg"
+        imgurl:"/images/icon/cofe.svg"
     },
     {
         id:3,
         title:'take a way ',
-        imgurl:"./images/icon/icon 3.svg"
+        imgurl:"/images/icon/icon 3.svg"
     },
     {
         id:4,
         title:'beans variant',
-        imgurl:"./images/icon/cup.svg"
+        imgurl:"/images/icon/cup.svg"
     },
     {
         id:5,
         title:'pastry',
-        imgurl:"./images/icon/icon 4.svg"
+        imgurl:"/images/icon/icon 4.svg"
     }
 ]
 
@@ -51,7 +51,7 @@ function Services() {
 
             </div>
             <div className='hidden absolute -bottom-24 right-0 rotate-180 md:block'>
-                <img src="./images/icon/bg-cofe.svg" alt="" />
+                <img src="/images/icon/bg-cofe.svg" alt="" />
             </div>
         </div>
     );

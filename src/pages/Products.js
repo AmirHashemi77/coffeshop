@@ -15,43 +15,43 @@ const products=[
         id:1,
         title:'arabica',
         subTitle:'dark roast',
-        img:'./images/product/1b18a0fb617b2a74ca210364083c4782.png'
+        img:'/images/product/1b18a0fb617b2a74ca210364083c4782.png'
     },
     {
         id:2,
         title:'house blend',
         subTitle:'dark roast',
-        img:'./images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
+        img:'/images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
     },
     {
         id:3,
         title:'Robusta',
         subTitle:'dark roast',
-        img:'./images/product/ff10151a8fba4a58a1cc43c532721079.png'
+        img:'/images/product/ff10151a8fba4a58a1cc43c532721079.png'
     },
     {
         id:4,
         title:'house blend',
         subTitle:'dark roast',
-        img:'./images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
+        img:'/images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
     },
     {
         id:5,
         title:'arabica',
         subTitle:'dark roast',
-        img:'./images/product/1b18a0fb617b2a74ca210364083c4782.png'
+        img:'/images/product/1b18a0fb617b2a74ca210364083c4782.png'
     },
     {
         id:6,
         title:'Robusta',
         subTitle:'dark roast',
-        img:'./images/product/ff10151a8fba4a58a1cc43c532721079.png'
+        img:'/images/product/ff10151a8fba4a58a1cc43c532721079.png'
     },
     {
         id:7,
         title:'house blend',
         subTitle:'dark roast',
-        img:'./images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
+        img:'/images/product/a1e02c7516fafdf48a9f1e33639aea78.png'
     },
     
 ]
@@ -75,28 +75,28 @@ const Products = () => {
                                 <ul className='flex flex-col w-full items-start gap-3'>
                                     <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
                                         <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="./images/icon/icon 3.svg" className='w-10 h-10 object-contain' alt='Take a way'/>
+                                            <img src="/images/icon/icon 3.svg" className='w-10 h-10 object-contain' alt='Take a way'/>
                                             <span className='text-brown1'>Take a way</span>
 
                                         </NavLink>
                                     </li>
                                     <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
                                         <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="./images/icon/icon 1.svg" className='w-10 h-10 object-contain' alt='Equipment'/>
+                                            <img src="/images/icon/icon 1.svg" className='w-10 h-10 object-contain' alt='Equipment'/>
                                             <span className='text-brown1'>Equipment</span>
 
                                         </NavLink>
                                     </li>
                                     <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
                                         <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="./images/icon/cofe.svg" className='w-10 h-10 object-contain' alt='type of coffee'/>
+                                            <img src="/images/icon/cofe.svg" className='w-10 h-10 object-contain' alt='type of coffee'/>
                                             <span className='text-brown1'>type of coffee</span>
 
                                         </NavLink>
                                     </li>
                                     <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
                                         <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="./images/icon/icon 4.svg" className='w-10 h-10 object-contain' alt='pastry'/>
+                                            <img src="/images/icon/icon 4.svg" className='w-10 h-10 object-contain' alt='pastry'/>
                                             <span className='text-brown1'>pastry</span>
 
                                         </NavLink>
@@ -115,8 +115,8 @@ const Products = () => {
                         </div>
 
                     </div>
-                    <div class="hidden absolute top-28 right-0 rotate-180 md:block"><img src="./images/icon/bg-cofe.svg" alt=""/></div>
-                    <div class="hidden absolute -bottom-5 left-0 md:block"><img src="./images/icon/bg-cofe.svg" alt=""/></div>
+                    <div class="hidden absolute top-28 right-0 rotate-180 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
+                    <div class="hidden absolute -bottom-5 left-0 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
             <Footer/>
         </div>
     );

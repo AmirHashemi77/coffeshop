@@ -9,37 +9,37 @@ const customerReviewArr=[
         id:1,
         auther:'Tyler Student',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/kelly-searle-209751-scaled 1.png'
+        img:'/images/profile/kelly-searle-209751-scaled 1.png'
     },
     {
         id:2,
         auther:'Ali',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/pexels-photo-26939-1-1024x1024 1.png'
+        img:'/images/profile/pexels-photo-26939-1-1024x1024 1.png'
     },
     {
         id:3,
         auther:'Reza',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/bewakoof-com-official-208957 1.png'
+        img:'/images/profile/bewakoof-com-official-208957 1.png'
     },
     {
         id:4,
         auther:'Karim',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/kelly-searle-209751-scaled 1.png'
+        img:'/images/profile/kelly-searle-209751-scaled 1.png'
     },
     {
         id:5,
         auther:'Sara',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/pexels-photo-26939-1-1024x1024 1.png'
+        img:'/images/profile/pexels-photo-26939-1-1024x1024 1.png'
     },
     {
         id:6,
         auther:'Elham',
         comment:'I love spending my downtime in a cozy coffee shop, surrounded by the sweet aroma of freshly brewed drinks and pastries.',
-        img:'./images/profile/bewakoof-com-official-208957 1.png'
+        img:'/images/profile/bewakoof-com-official-208957 1.png'
     },
 ]
 
@@ -133,10 +133,10 @@ const CustomerReview = () => {
             </div>
                        
             <div className='hidden absolute -top-24 left-0 rotate-180 xl:block z-0 -scale-x-100'>
-                <img src="./images/icon/bg-cofe2.svg" alt="" />
+                <img src="/images/icon/bg-cofe2.svg" alt="" />
             </div>
             <div className='hidden absolute -top-40 left-40 rotate-180 md:block z-0 -scale-y-100'>
-                <img src="./images/icon/bg-cofe3.svg" alt="" />
+                <img src="/images/icon/bg-cofe3.svg" alt="" />
             </div>
         </div>
     );

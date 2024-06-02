@@ -14,14 +14,14 @@ const OfferSection = () => {
                                 </p>
                                 <button className='btn rounded-3xl py-2 px-3 w-full text-brown1 font-leiko capitalize bg-btn2 lg:text-2xl lg:px-7 md:w-auto'>Shop Now</button>
                             </div>
-                            <img src="./images/product/cea2f73f692d663ab2e2f8cf3ab8cefb.png" alt="product" className='max-w-sm w-64 h-80 md2:w-96 object-contain object-center'/>
+                            <img src="/images/product/cea2f73f692d663ab2e2f8cf3ab8cefb.png" alt="product" className='max-w-sm w-64 h-80 md2:w-96 object-contain object-center'/>
                         </div>
                         
                     
                 </div>
             </div>
             <div className='hidden absolute -bottom-56 -left-3 md:block z-0'>
-                <img src="./images/icon/bg-cofe2.svg" alt="" />
+                <img src="/images/icon/bg-cofe2.svg" alt="" />
             </div>
         </div>
     );

@@ -30,7 +30,7 @@ const StoryCardSlider = () => {
                 </Swiper>
             </div>
             <div className='hidden absolute -bottom-5 left-0 md:block'>
-                <img src="./images/icon/bg-cofe.svg" alt="" />
+                <img src="/images/icon/bg-cofe.svg" alt="" />
             </div>
         </div>
     );

@@ -27,7 +27,7 @@ const PopularMenu = () => {
                             </div>
                         </div>
                         {/* menu img */}
-                        <img src="./images/Popularmenu Img.png" alt="" className='w-[39vw] object-contain object-center -translate-y-[5vw] 2xl:-translate-y-[76.8px]'/>
+                        <img src="/images/Popularmenu Img.png" alt="" className='w-[39vw] object-contain object-center -translate-y-[5vw] 2xl:-translate-y-[76.8px]'/>
                         {/* right menu */}
                         <div className='flex flex-col item-start gap-[6.8vw] 2xl:gap-24'>
                             <div data-aos='right-menu-1' data-aos-duration="1500" data-aos-delay="0" className='menu-item right-menu -translate-x-[5vw] 2xl:-translate-x-[76.8px]'>
@@ -50,21 +50,21 @@ const PopularMenu = () => {
                     </div>
                     <button className='flex items-baseline justify-center gap-2 self-end mr-10'>
                         <span className='capitalize text-brown1 text-[3.6vw] font-leiko lg:text-4xl'>our menu</span>
-                        <img src="./images/icon/mdi_arrow-bottom-right-bold-box-outline.svg" alt="" className='w-[3.6vw] h-[3.5vw] lg:w-6 lg:h-6'/>
+                        <img src="/images/icon/mdi_arrow-bottom-right-bold-box-outline.svg" alt="" className='w-[3.6vw] h-[3.5vw] lg:w-6 lg:h-6'/>
                     </button>
                 </div>
             </div>
             <div className='hidden absolute bottom-0 right-0 rotate-180 md:block z-0'>
-                <img src="./images/icon/bg-cofe2.svg" alt="" />
+                <img src="/images/icon/bg-cofe2.svg" alt="" />
             </div>
             <div className='hidden absolute bottom-64 right-20 rotate-180 lg:block z-0'>
-                <img src="./images/icon/bg-cofe3.svg" alt="" />
+                <img src="/images/icon/bg-cofe3.svg" alt="" />
             </div>
             <div className='hidden absolute top-64 left-0 rotate-180 md:block z-0 -scale-x-100'>
-                <img src="./images/icon/bg-cofe2.svg" alt="" />
+                <img src="/images/icon/bg-cofe2.svg" alt="" />
             </div>
             <div className='hidden absolute top-0 left-20 rotate-180 md:block z-0 -scale-y-100'>
-                <img src="./images/icon/bg-cofe3.svg" alt="" />
+                <img src="/images/icon/bg-cofe3.svg" alt="" />
             </div>
         </div>
     );

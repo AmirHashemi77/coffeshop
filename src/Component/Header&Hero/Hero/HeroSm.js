@@ -6,8 +6,8 @@ const HeroSm = () => {
     return (
         <div className='flex flex-col items-center w-full py-5'>
             <div className='w-full relative'>
-                <img src="./images/hero-img-min.png" alt="hero-img"/>
-                <img src="./images/Coffees.png" alt="coffees" className='absolute top-0 right-0 w-3/4 h-3/4 drop-shadow-lg'/>
+                <img src="/images/hero-img-min.png" alt="hero-img"/>
+                <img src="/images/Coffees.png" alt="coffees" className='absolute top-0 right-0 w-3/4 h-3/4 drop-shadow-lg'/>
                 <CardHero/>
 
             </div>

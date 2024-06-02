@@ -19,23 +19,23 @@ const AboutUs = () => {
                 <div className='flex flex-col items-start gap-10 w-full px-5 max-w-5xl relative md:flex-row md:items-start md:justify-between'>
                     <ul className='flex flex-col items-start gap-7 px-7'>               
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="./images/icon/material-symbols_location-on-rounded.svg" alt="" />
+                                        <img src="/images/icon/material-symbols_location-on-rounded.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>12 jhon Avenue #35 - new York </span>
                                     </li>
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="./images/icon/ic_round-email.svg" alt="" />
+                                        <img src="/images/icon/ic_round-email.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>elizacoffee@coffee.com</span>
                                     </li>
                                     <li className='flex items-center gap-2 py-[10px] px-2'>
-                                        <img src="./images/icon/ic_outline-phone-android.svg" alt="" />
+                                        <img src="/images/icon/ic_outline-phone-android.svg" alt="" />
                                         <span className='capitalize text-cream1 font-leiko text-base'>+1-222-34-eliza</span>
                                     </li> 
                     </ul>
                     <div className='flex items-center gap-3 px-9'>
                         <span className='capitalize text-cream1 text-base font-leiko'>social media: </span>
-                        <a href="/"><img src="./images/icon/linkedin-icon.svg" alt="" /></a>
-                        <a href="/"><img src="./images/icon/pintrest-icon.svg" alt="" /></a>
-                        <a href="/"><img src="./images/icon/instagram-icon.svg" alt="" /></a>
+                        <a href="/"><img src="/images/icon/linkedin-icon.svg" alt="" /></a>
+                        <a href="/"><img src="/images/icon/pintrest-icon.svg" alt="" /></a>
+                        <a href="/"><img src="/images/icon/instagram-icon.svg" alt="" /></a>
                     </div>
                 </div>
                 <div className='flex flex-col items-center w-full px-5'>
@@ -95,8 +95,8 @@ const AboutUs = () => {
                 </div>
 
             </div>
-             <div class="hidden absolute top-28 right-0 rotate-180 md:block"><img src="./images/icon/bg-cofe.svg" alt=""/></div>
-             <div class="hidden absolute -bottom-5 left-0 md:block"><img src="./images/icon/bg-cofe.svg" alt=""/></div>
+             <div class="hidden absolute top-28 right-0 rotate-180 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
+             <div class="hidden absolute -bottom-5 left-0 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
      
  </div>
     );
