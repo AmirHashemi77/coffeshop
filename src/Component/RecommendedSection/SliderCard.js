@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const SliderCard = ({imgurl,title,subTitle,cardWidth}) => {
     const cardEl=useRef();
@@ -11,7 +12,9 @@ const SliderCard = ({imgurl,title,subTitle,cardWidth}) => {
     return (
         <div ref={cardEl} className='bg-card-slider2 px-3 relative'>
             <div className='flex items-center relative mb-20'>
-                <img src={imgurl} alt="" />
+                <Link to='/product/productid'>
+                    <img src={imgurl} alt="" />
+                </Link>
                 <div className='absolute top-5 left-5'>
                     <img src="/images/icon/ph_info.svg" alt="" />
                 </div>

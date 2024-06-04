@@ -53,8 +53,8 @@ const Home = () => {
                   <PopularMenu/>
                   {/* our blog */}
                   <OurBlog/>
-                  <CustomerReview/>
                   {/* customer review */}
+                  <CustomerReview/>
                   {/* email section */}
                   <EmailSection/>
                   {/* footer */}

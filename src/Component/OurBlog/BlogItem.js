@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const BlogItem = ({blogItemWidth}) => {
     const cardWidth=useRef()
@@ -58,7 +59,7 @@ const BlogItem = ({blogItemWidth}) => {
                 <div className='flex flex-col items-center flex-wrap justify-between gap-4 w-full lg:flex-row lg:items-end lg:gap-0'>
                     <img src="/images/Asset 1@2x 1.png" alt="" />
 
-                    <button className='text-xl font-leiko text-white underline px-2'>More...</button>
+                    <Link to='/blogs/blogid' className='text-xl font-leiko text-white underline px-2'>More...</Link>
                 </div>
             </div>
         </div>

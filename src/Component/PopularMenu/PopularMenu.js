@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const PopularMenu = () => {
     return (
-        <div className='w-full my-16 relative md:my-32'>
+        <div id='menu' className='w-full my-16 relative md:my-32'>
             <div className='w-full max-w-7xl mx-auto px-5'>
                 <div className='flex flex-col items-center justify-center w-full'>
                     <h5 className='section-title font-dancingScript font-bold capitalize md:text-6xl'>popular menu</h5>
@@ -48,10 +49,10 @@ const PopularMenu = () => {
                             </div>
                         </div>
                     </div>
-                    <button className='flex items-baseline justify-center gap-2 self-end mr-10'>
+                    <Link to='/products' className='flex items-baseline justify-center gap-2 self-end mr-10'>
                         <span className='capitalize text-brown1 text-[3.6vw] font-leiko lg:text-4xl'>our menu</span>
                         <img src="/images/icon/mdi_arrow-bottom-right-bold-box-outline.svg" alt="" className='w-[3.6vw] h-[3.5vw] lg:w-6 lg:h-6'/>
-                    </button>
+                    </Link>
                 </div>
             </div>
             <div className='hidden absolute bottom-0 right-0 rotate-180 md:block z-0'>

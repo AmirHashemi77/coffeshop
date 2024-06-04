@@ -1,5 +1,6 @@
 import React, { lazy } from 'react';
 import CardHero from './CardHero';
+import { Link } from 'react-router-dom';
 
 
 const HeroImg = lazy(() => import('./HeroImg.js'));
@@ -15,8 +16,8 @@ const HeroMd = () => {
                         search for your coffee now
                     </p>
                     <div className='flex items-center space-x-3'>
-                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>calaog</button>
-                        <button className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>shop now</button>
+                        <Link to='/#menu' className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>calaog</Link>
+                        <Link to='/products' className='btn rounded-3xl py-2 px-3 text-brown1 font-leiko capitalize bg-btn lg:text-2xl lg:px-7'>shop now</Link>
                     </div>
                 </div>
                 <HeroImg/>

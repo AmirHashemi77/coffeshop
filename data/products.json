@@ -1,0 +1,529 @@
+{
+    "products": [
+      {
+        "productName": "Cappuccino",
+        "description": "A rich and creamy cappuccino made with freshly brewed espresso and steamed milk.",
+        "photo": "https://example.com/photos/cappuccino.jpg",
+        "price": 4.00,
+        "comments": [
+          {
+            "name": "Alice Johnson",
+            "commentContent": "Perfectly balanced and delicious!",
+            "date": "2024-05-01"
+          },
+          {
+            "name": "John Smith",
+            "commentContent": "The best cappuccino I've ever had!",
+            "date": "2024-05-03"
+          }
+        ]
+      },
+      {
+        "productName": "Latte",
+        "description": "A smooth and velvety latte made with freshly brewed espresso and steamed milk.",
+        "photo": "https://example.com/photos/latte.jpg",
+        "price": 4.50,
+        "comments": [
+          {
+            "name": "Emily Davis",
+            "commentContent": "Creamy and delicious. My favorite!",
+            "date": "2024-05-02"
+          },
+          {
+            "name": "Michael Brown",
+            "commentContent": "Perfect start to my morning.",
+            "date": "2024-05-04"
+          }
+        ]
+      },
+      {
+        "productName": "Americano",
+        "description": "A strong and bold Americano made with freshly brewed espresso and hot water.",
+        "photo": "https://example.com/photos/americano.jpg",
+        "price": 3.00,
+        "comments": [
+          {
+            "name": "Sarah Wilson",
+            "commentContent": "Just the right amount of strength and flavor.",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "David Martinez",
+            "commentContent": "My go-to coffee every day.",
+            "date": "2024-05-06"
+          }
+        ]
+      },
+      {
+        "productName": "Mocha",
+        "description": "A rich and chocolatey mocha made with freshly brewed espresso, steamed milk, and chocolate syrup.",
+        "photo": "https://example.com/photos/mocha.jpg",
+        "price": 5.00,
+        "comments": [
+          {
+            "name": "Olivia Garcia",
+            "commentContent": "Chocolate and coffee together, perfect!",
+            "date": "2024-05-07"
+          },
+          {
+            "name": "James Lee",
+            "commentContent": "Delicious and satisfying.",
+            "date": "2024-05-08"
+          }
+        ]
+      },
+      {
+        "productName": "Matcha Latte",
+        "description": "A creamy and refreshing matcha latte made with high-quality matcha powder and steamed milk.",
+        "photo": "https://example.com/photos/matcha_latte.jpg",
+        "price": 5.50,
+        "comments": [
+          {
+            "name": "Sophia Hernandez",
+            "commentContent": "The best matcha latte I've had. So smooth!",
+            "date": "2024-05-09"
+          },
+          {
+            "name": "Daniel Walker",
+            "commentContent": "Great flavor and very refreshing.",
+            "date": "2024-05-10"
+          }
+        ]
+      },
+      {
+        "productName": "Chai Tea Latte",
+        "description": "A spiced chai tea latte made with a blend of black tea, spices, and steamed milk.",
+        "photo": "https://example.com/photos/chai_tea_latte.jpg",
+        "price": 4.75,
+        "comments": [
+          {
+            "name": "Charlotte Gonzalez",
+            "commentContent": "Perfectly spiced and creamy.",
+            "date": "2024-05-12"
+          },
+          {
+            "name": "Ethan Martinez",
+            "commentContent": "A great alternative to coffee. Very tasty.",
+            "date": "2024-05-15"
+          }
+        ]
+      },
+      {
+        "productName": "Iced Coffee",
+        "description": "A refreshing iced coffee made with freshly brewed coffee and served over ice.",
+        "photo": "https://example.com/photos/iced_coffee.jpg",
+        "price": 3.50,
+        "comments": [
+          {
+            "name": "Amelia Walker",
+            "commentContent": "Perfect on a hot day. Very refreshing.",
+            "date": "2024-05-18"
+          },
+          {
+            "name": "William Robinson",
+            "commentContent": "Smooth and refreshing. Just what I needed.",
+            "date": "2024-05-20"
+          }
+        ]
+      },
+      {
+        "productName": "Hot Chocolate",
+        "description": "A rich and creamy hot chocolate made with high-quality cocoa and steamed milk.",
+        "photo": "https://example.com/photos/hot_chocolate.jpg",
+        "price": 4.25,
+        "comments": [
+          {
+            "name": "Harper Scott",
+            "commentContent": "Warm and comforting. Perfect for cold days.",
+            "date": "2024-05-23"
+          },
+          {
+            "name": "Benjamin Green",
+            "commentContent": "Delicious and creamy. My kids love it!",
+            "date": "2024-05-25"
+          }
+        ]
+      }
+    ],
+    "cafeEquipment": [
+      {
+        "equipmentName": "Espresso Machine",
+        "description": "A high-quality espresso machine for making perfect espresso shots.",
+        "photo": "https://example.com/photos/espresso_machine.jpg",
+        "price": 1500.00,
+        "comments": [
+          {
+            "name": "Emma Thompson",
+            "commentContent": "Makes the best espresso! Worth every penny.",
+            "date": "2024-04-15"
+          },
+          {
+            "name": "Liam Johnson",
+            "commentContent": "Reliable and easy to use. Our customers love the coffee.",
+            "date": "2024-04-20"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Coffee Grinder",
+        "description": "A precision coffee grinder for freshly ground coffee beans.",
+        "photo": "https://example.com/photos/coffee_grinder.jpg",
+        "price": 200.00,
+        "comments": [
+          {
+            "name": "Sophia Williams",
+            "commentContent": "Grinds the beans perfectly. A great addition to our cafe.",
+            "date": "2024-04-18"
+          },
+          {
+            "name": "James Brown",
+            "commentContent": "Compact and efficient. Highly recommend.",
+            "date": "2024-04-22"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Blender",
+        "description": "A powerful blender for making smoothies and frappes.",
+        "photo": "https://example.com/photos/blender.jpg",
+        "price": 300.00,
+        "comments": [
+          {
+            "name": "Olivia Davis",
+            "commentContent": "Great for smoothies. Very powerful and fast.",
+            "date": "2024-04-25"
+          },
+          {
+            "name": "Lucas Wilson",
+            "commentContent": "Handles ice like a pro. Our smoothies have never been better.",
+            "date": "2024-04-28"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Refrigerator",
+        "description": "A large refrigerator for storing perishable items.",
+        "photo": "https://example.com/photos/refrigerator.jpg",
+        "price": 1200.00,
+        "comments": [
+          {
+            "name": "Isabella Martinez",
+            "commentContent": "Spacious and efficient. Keeps everything fresh.",
+            "date": "2024-05-01"
+          },
+          {
+            "name": "Henry Anderson",
+            "commentContent": "Reliable and quiet. Very happy with this purchase.",
+            "date": "2024-05-03"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Oven",
+        "description": "A commercial oven for baking and heating food.",
+        "photo": "https://example.com/photos/oven.jpg",
+        "price": 800.00,
+        "comments": [
+          {
+            "name": "Mia Hernandez",
+            "commentContent": "Bakes evenly and quickly. Perfect for our cafe needs.",
+            "date": "2024-05-06"
+          },
+          {
+            "name": "Alexander Lee",
+            "commentContent": "Great for pastries and quick meals. Very efficient.",
+            "date": "2024-05-09"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Dishwasher",
+        "description": "An efficient dishwasher for quick and thorough cleaning of dishes.",
+        "photo": "https://example.com/photos/dishwasher.jpg",
+        "price": 700.00,
+        "comments": [
+          {
+            "name": "Charlotte Gonzalez",
+            "commentContent": "Cleans dishes perfectly every time. Saves us a lot of time.",
+            "date": "2024-05-12"
+          },
+          {
+            "name": "Ethan Martinez",
+            "commentContent": "Very efficient and easy to use. Highly recommend.",
+            "date": "2024-05-15"
+          }
+        ]
+      },
+      {
+        "equipmentName": "POS System",
+        "description": "A complete point of sale system for managing orders and payments.",
+        "photo": "https://example.com/photos/pos_system.jpg",
+        "price": 1000.00,
+        "comments": [
+          {
+            "name": "Amelia Walker",
+            "commentContent": "Makes transactions quick and easy. Great system.",
+            "date": "2024-05-18"
+          },
+          {
+            "name": "William Robinson",
+            "commentContent": "User-friendly and efficient. A must-have for any cafe.",
+            "date": "2024-05-20"
+          }
+        ]
+      },
+      {
+        "equipmentName": "Ice Maker",
+        "description": "An ice maker for providing a constant supply of ice.",
+        "photo": "https://example.com/photos/ice_maker.jpg",
+        "price": 600.00,
+        "comments": [
+          {
+            "name": "Harper Scott",
+            "commentContent": "Provides ice quickly and efficiently. Very satisfied.",
+            "date": "2024-05-23"
+          },
+          {
+            "name": "Benjamin Green",
+            "commentContent": "Never run out of ice again! Excellent product.",
+            "date": "2024-05-25"
+          }
+        ]
+      }
+    ],
+    "cafePastries": [
+      {
+        "pastryName": "Chocolate Croissant",
+        "description": "A flaky croissant filled with rich chocolate.",
+        "photo": "https://example.com/photos/chocolate_croissant.jpg",
+        "price": 3.50,
+        "comments": [
+          {
+            "name": "Alice Johnson",
+            "commentContent": "Absolutely delicious! The chocolate is perfectly melted.",
+            "date": "2024-05-01"
+          },
+          {
+            "name": "John Smith",
+            "commentContent": "The best croissant I've ever had!",
+            "date": "2024-05-03"
+          }
+        ]
+      },
+      {
+        "pastryName": "Blueberry Muffin",
+        "description": "A moist muffin bursting with fresh blueberries.",
+        "photo": "https://example.com/photos/blueberry_muffin.jpg",
+        "price": 2.75,
+        "comments": [
+          {
+            "name": "Emily Davis",
+            "commentContent": "Perfectly sweet and full of blueberries.",
+            "date": "2024-05-02"
+          },
+          {
+            "name": "Michael Brown",
+            "commentContent": "Great texture and flavor. A must-try!",
+            "date": "2024-05-04"
+          }
+        ]
+      },
+      {
+        "pastryName": "Cinnamon Roll",
+        "description": "A soft, gooey roll with a rich cinnamon filling and icing on top.",
+        "photo": "https://example.com/photos/cinnamon_roll.jpg",
+        "price": 3.00,
+        "comments": [
+          {
+            "name": "Sarah Wilson",
+            "commentContent": "The cinnamon roll is heavenly. So soft and flavorful!",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "David Martinez",
+            "commentContent": "Perfect balance of sweetness and spice.",
+            "date": "2024-05-06"
+          }
+        ]
+      },
+      {
+        "pastryName": "Lemon Tart",
+        "description": "A tangy lemon tart with a buttery crust.",
+        "photo": "https://example.com/photos/lemon_tart.jpg",
+        "price": 4.00,
+        "comments": [
+          {
+            "name": "Olivia Garcia",
+            "commentContent": "Refreshing and delicious. The crust is perfect.",
+            "date": "2024-05-07"
+          },
+          {
+            "name": "James Lee",
+            "commentContent": "Loved the tartness of the lemon filling.",
+            "date": "2024-05-08"
+          }
+        ]
+      },
+      {
+        "pastryName": "Almond Biscotti",
+        "description": "A crunchy biscotti with a rich almond flavor, perfect for dipping in coffee.",
+        "photo": "https://example.com/photos/almond_biscotti.jpg",
+        "price": 2.50,
+        "comments": [
+          {
+            "name": "Sophia Hernandez",
+            "commentContent": "Great with my morning coffee. Love the almond flavor.",
+            "date": "2024-05-09"
+          },
+          {
+            "name": "Daniel Walker",
+            "commentContent": "Crispy and delicious. Highly recommend.",
+            "date": "2024-05-10"
+          }
+        ]
+      }
+    ],
+    "cafeBlog": [
+      {
+        "id": 1,
+        "title": "The Art of Making the Perfect Cappuccino",
+        "content": "Learn the secrets behind making the perfect cappuccino, from selecting the right beans to mastering the milk frothing technique.",
+        "comments": [
+          {
+            "name": "Alice Johnson",
+            "commentContent": "Great tips! I tried them and my cappuccinos have never been better.",
+            "date": "2024-05-01"
+          },
+          {
+            "name": "John Smith",
+            "commentContent": "Very informative. Thanks for sharing!",
+            "date": "2024-05-03"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "A Guide to Coffee Roasts",
+        "content": "Discover the different types of coffee roasts and how they affect the flavor and aroma of your coffee.",
+        "comments": [
+          {
+            "name": "Emily Davis",
+            "commentContent": "I never knew there were so many types of roasts. Great read!",
+            "date": "2024-05-02"
+          },
+          {
+            "name": "Michael Brown",
+            "commentContent": "This guide helped me choose the right roast for my taste. Thanks!",
+            "date": "2024-05-04"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Benefits of Drinking Coffee",
+        "content": "Explore the various health benefits of drinking coffee, including improved mental alertness and physical performance.",
+        "comments": [
+          {
+            "name": "Sarah Wilson",
+            "commentContent": "I had no idea coffee had so many benefits. Very enlightening!",
+            "date": "2024-05-05"
+          },
+          {
+            "name": "David Martinez",
+            "commentContent": "Great article! I feel even better about my daily coffee habit.",
+            "date": "2024-05-06"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "How to Brew the Perfect Cup of Coffee at Home",
+        "content": "Step-by-step instructions on how to brew the perfect cup of coffee at home, including tips on equipment and techniques.",
+        "comments": [
+          {
+            "name": "Olivia Garcia",
+            "commentContent": "Followed these steps and my coffee tastes amazing now!",
+            "date": "2024-05-07"
+          },
+          {
+            "name": "James Lee",
+            "commentContent": "Helpful guide for a coffee newbie like me. Thanks!",
+            "date": "2024-05-08"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Exploring Different Coffee Beans",
+        "content": "Learn about the various types of coffee beans, their origins, and how they influence the taste of your coffee.",
+        "comments": [
+          {
+            "name": "Sophia Hernandez",
+            "commentContent": "Informative and interesting. I love learning about coffee beans!",
+            "date": "2024-05-09"
+          },
+          {
+            "name": "Daniel Walker",
+            "commentContent": "Great read. I feel more confident choosing beans now.",
+            "date": "2024-05-10"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "The History of Coffee",
+        "content": "A fascinating look at the history of coffee, from its discovery to its global popularity today.",
+        "comments": [
+          {
+            "name": "Charlotte Gonzalez",
+            "commentContent": "Loved learning about the history of my favorite drink!",
+            "date": "2024-05-12"
+          },
+          {
+            "name": "Ethan Martinez",
+            "commentContent": "Very well-written and informative.",
+            "date": "2024-05-15"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Sustainable Coffee Practices",
+        "content": "An overview of sustainable coffee farming practices and how you can support environmentally friendly coffee production.",
+        "comments": [
+          {
+            "name": "Amelia Walker",
+            "commentContent": "Important topic. Thanks for raising awareness.",
+            "date": "2024-05-18"
+          },
+          {
+            "name": "William Robinson",
+            "commentContent": "I appreciate the focus on sustainability. Great article!",
+            "date": "2024-05-20"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Pairing Coffee with Food",
+        "content": "Tips and ideas for pairing coffee with different types of food to enhance your culinary experience.",
+        "comments": [
+          {
+            "name": "Harper Scott",
+            "commentContent": "I tried some of these pairings and they were fantastic!",
+            "date": "2024-05-23"
+          },
+          {
+            "name": "Benjamin Green",
+            "commentContent": "Great suggestions. Will definitely try these.",
+            "date": "2024-05-25"
+          }
+        ]
+      }
+    ]
+
+  }
+  
+
+
+

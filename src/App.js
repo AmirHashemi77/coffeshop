@@ -1,6 +1,6 @@
 import React from 'react';
 import UiContextProvider from './context/UiContext';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import Blogs from './pages/Blogs';
@@ -21,8 +21,9 @@ const App = () => {
     <UiContextProvider>
       <Routes>
         <Route path='/' element={<Home/>}  />
-        <Route path='/products' element={<Products/>}  />
-        <Route path='/products/:productid' element={<ProductDetails/>}  />
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/products/:productcategory' element={<Products/>}  />
+        <Route path='/product/:productid' element={<ProductDetails/>}  />
         <Route path='/blogs' element={<Blogs/>}  />
         <Route path='/blogs/:blogid' element={<BlogDetails/>}  />
         <Route path='/aboutus' element={<AboutUs/>}  />

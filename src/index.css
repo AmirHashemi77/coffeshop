@@ -111,6 +111,12 @@
       backdrop-filter: blur(2px);
       border-radius: 0px 0px 30px 30px;
     }
+    .link-header{
+      @apply flex items-center justify-center text-base font-leiko  text-cream2 capitalize h-full px-1 lg:px-3 xl:px-5 2xl:text-2xl;
+    }
+    .link-header-sm{
+      @apply w-full text-xl capitalize font-leiko font-semibold text-cream3 py-5 px-4;
+    }
     .active-link-header-sm{
       background-color: #7C573C;
       backdrop-filter: blur(2px);
