@@ -176,7 +176,7 @@
     .form-input{
       padding: 14px 24px 14px 12px;
       border-radius: 12px;
-      @apply placeholder:text-brown2 placeholder:font-leiko placeholder:text-base md2:placeholder:text-xl w-full 
+      @apply placeholder:text-brown2 placeholder:font-leiko placeholder:text-base placeholder:capitalize md2:placeholder:text-xl w-full 
     }
     .form-input:focus{
       outline: none;
@@ -392,6 +392,15 @@
     width: 323.048px;
     height: 473.548px;
   
+  }
+
+  .link-sidebar{
+    @apply flex items-center justify-start gap-3 px-3 py-4 bg-[#6D5349] rounded-xl duration-300;
+  }
+
+
+  .active-link-sidebar{
+    @apply flex items-center justify-start gap-3 px-3 py-4 bg-[#251b1773] rounded-xl duration-300;
   }
 
   

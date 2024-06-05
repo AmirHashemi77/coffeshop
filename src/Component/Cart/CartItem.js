@@ -1,4 +1,5 @@
 import React from 'react';
+import NumOfProduct from '../ProductDetails/NumOfProduct';
 
 const CartItem = () => {
     return (
@@ -9,11 +10,7 @@ const CartItem = () => {
                 <span className='text-white text-xl font-leiko leading-8 text-center lg:text-2xl capitalize opacity-90'>Arabica</span>
             </div>
             {/* num of product  */}
-            <div className='flex flex-row items-center gap-3'>
-                <button className='flex items-center justify-center rounded-full w-10 h-10 bg-brown1 text-brown4 text-[2rem] '>+</button>
-                    <input type="text" className='w-10 h-10 text-xl px-4 py-2 rounded-lg' value='1' readOnly />
-                <button className='flex items-center justify-center rounded-full w-10 h-10  bg-brown1 text-brown4 text-[2rem]'>-</button>
-            </div>
+            <NumOfProduct/>
             {/* price  */}
             <p className='text-white text-xl font-leiko leading-8 text-center lg:text-2xl capitalize opacity-90'>34$</p>
         </div>

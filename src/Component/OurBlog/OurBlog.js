@@ -1,7 +1,7 @@
 import React, { useCallback, useRef } from 'react';
 import BlogItem from './BlogItem';
 
-const OurBlog = () => {
+const OurBlog = ({title}) => {
     const slider=useRef()
     const blogItem=useRef()
     const blogItemWidth=useCallback((width)=>{
@@ -12,7 +12,7 @@ const OurBlog = () => {
     }
     return (
         <div className='w-full relative my-16 py-16 our-blog-bg'>           
-            <h4 className='section-title text-shadow absolute z-10 left-1/2 -translate-x-1/2 -top-6 md:text-5xl md:-top-8'>Our Blog</h4>
+            <h4 className='section-title text-shadow absolute z-10 left-1/2 -translate-x-1/2 -top-6 md:text-5xl md:-top-8'>{title}</h4>
             <div ref={slider} className='blogs-slider px-5'>
                 <BlogItem blogItemWidth={blogItemWidth}/>
                 <BlogItem blogItemWidth={blogItemWidth}/>

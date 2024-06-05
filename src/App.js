@@ -9,6 +9,8 @@ import NotFound from './pages/NotFound';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import AboutUs from './pages/AboutUs';
+import LogIn from './pages/LogIn';
+import SignUp from './pages/SignUp';
 
 
 
@@ -21,13 +23,15 @@ const App = () => {
     <UiContextProvider>
       <Routes>
         <Route path='/' element={<Home/>}  />
-        <Route path='/products' element={<Products/>}/>
+        <Route path='/products' element={<Navigate to='/products/equipment'/>}/>
         <Route path='/products/:productcategory' element={<Products/>}  />
         <Route path='/product/:productid' element={<ProductDetails/>}  />
         <Route path='/blogs' element={<Blogs/>}  />
         <Route path='/blogs/:blogid' element={<BlogDetails/>}  />
         <Route path='/aboutus' element={<AboutUs/>}  />
         <Route path='/Cart' element={<Cart/>}  />
+        <Route path='/login' element={<LogIn/>}  />
+        <Route path='/signup' element={<SignUp/>}  />
         <Route path='*' element={<NotFound/>}  />
       </Routes>
     </UiContextProvider>

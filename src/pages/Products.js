@@ -7,6 +7,7 @@ import SideBarContainer from '../Component/SideBar/SideBarContainer';
 import SliderCard from '../Component/RecommendedSection/SliderCard';
 import { NavLink } from 'react-router-dom';
 import List from '../Component/RecommendedSection/List';
+import { servicesArr } from '../utils/servicesArr';
 
 
 
@@ -73,34 +74,19 @@ const Products = () => {
                         <div className='flex flex-col items-center gap-5 w-full px-5 max-w-7xl relative md:flex-row md:items-start'>
                             <SideBarContainer title='Product Type'>
                                 <ul className='flex flex-col w-full items-start gap-3'>
-                                    <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
-                                        <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="/images/icon/icon 3.svg" className='w-10 h-10 object-contain' alt='Take a way'/>
-                                            <span className='text-brown1'>Take a way</span>
 
-                                        </NavLink>
-                                    </li>
-                                    <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
-                                        <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="/images/icon/icon 1.svg" className='w-10 h-10 object-contain' alt='Equipment'/>
-                                            <span className='text-brown1'>Equipment</span>
 
-                                        </NavLink>
-                                    </li>
-                                    <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
-                                        <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="/images/icon/cofe.svg" className='w-10 h-10 object-contain' alt='type of coffee'/>
-                                            <span className='text-brown1'>type of coffee</span>
+                                    {servicesArr.map((item)=>(
+                                        <li key={item.id} className='w-full'>
+                                            <NavLink to={`/products/${item.route}`} className={({isActive})=>isActive ? 'active-link-sidebar' : 'link-sidebar'}>
+                                                <img src={item.imgurl} className='w-10 h-10 object-contain' alt={item.route}/>
+                                                <span className='text-brown1 capitalize'>{item.title}</span>
 
-                                        </NavLink>
-                                    </li>
-                                    <li className='px-3 py-4 bg-[#6D5349] rounded-xl w-full'>
-                                        <NavLink className='flex items-center justify-start gap-3'>
-                                            <img src="/images/icon/icon 4.svg" className='w-10 h-10 object-contain' alt='pastry'/>
-                                            <span className='text-brown1'>pastry</span>
+                                            </NavLink>
+                                        </li>
 
-                                        </NavLink>
-                                    </li>
+                                    ))}
+                               
                                     
                                 </ul>
                             </SideBarContainer>

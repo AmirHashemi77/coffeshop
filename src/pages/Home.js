@@ -52,7 +52,7 @@ const Home = () => {
                   {/* popular menu */}
                   <PopularMenu/>
                   {/* our blog */}
-                  <OurBlog/>
+                  <OurBlog title='OurBlog'/>
                   {/* customer review */}
                   <CustomerReview/>
                   {/* email section */}

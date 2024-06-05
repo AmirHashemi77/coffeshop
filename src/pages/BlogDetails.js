@@ -70,7 +70,7 @@ const BlogDetails = () => {
 
             
             
-            <OurBlog/>
+            <OurBlog title='Similar Blogs'/>
 
             <Footer/>
      
