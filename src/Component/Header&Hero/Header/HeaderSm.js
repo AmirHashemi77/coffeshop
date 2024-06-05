@@ -21,7 +21,9 @@ const HeaderSm = () => {
                 </Link> 
                 <div className='flex items-center gap-2'>
                     <AccountIcon/>
-                    <CartIcon/>
+                    <Link to='/cart'>
+                        <CartIcon/>
+                    </Link>
                     <button onClick={openMenuHandler} >
                         <MenuIcon/>
                     </button>

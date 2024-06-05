@@ -32,7 +32,7 @@ const HeaderMd = () => {
             </Link>
             <div className='flex items-center gap-3'>
                 <AccountIcon/>
-                <CartIcon/>
+                <Link to='/cart'><CartIcon/></Link>
             </div>
         </div>
         <ul className='flex items-center justify-between w-1/2 h-full px-3  z-10'>
