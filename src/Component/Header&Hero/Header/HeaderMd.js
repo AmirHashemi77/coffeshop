@@ -1,15 +1,17 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import AccountIcon from '../../../icons/AccountIcon';
 import CartIcon from '../../../icons/CartIcon';
 import { Link, NavLink } from 'react-router-dom';
+import { uiContext } from '../../../context/UiContext';
 
 const HeaderMd = () => {
 
     const headerEl=useRef();
+    const uiCtx=useContext(uiContext)
     
 
     document.onwheel=(e)=>{
-        const headerHeight=headerEl.current.getBoundingClientRect().height;
+        const headerHeight=headerEl?.current?.getBoundingClientRect()?.height;
         
         if(window.scrollY>headerHeight && e.deltaY>0){
           
@@ -31,7 +33,13 @@ const HeaderMd = () => {
                 <img src="/images/logo.png" alt="logo" />
             </Link>
             <div className='flex items-center gap-3'>
-                <AccountIcon/>
+                <div className='flex items-center justify-center relative' onMouseEnter={()=>uiCtx?.setOpenRegisterMenu(true)} onMouseLeave={()=>uiCtx.setOpenRegisterMenu(false)}>
+                    <span className='cursor-pointer'><AccountIcon/></span>
+                   {uiCtx.isopenRegisterMenu && <div className='flex flex-col items-start absolute top-full right-3/4 bg-[#6c493cbe] py-3 px-5 shadow-xl rounded-lg'>
+                        <Link className='text-lg text-brown1 hover:opacity-75 duration-200 ' to='/signup'>SignUp</Link>
+                        <Link className='text-lg text-brown1 hover:opacity-75 duration-200 ' to='/login'>LogIn</Link>
+                    </div>}
+                </div>
                 <Link to='/cart'><CartIcon/></Link>
             </div>
         </div>

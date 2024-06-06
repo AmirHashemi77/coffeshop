@@ -1,21 +1,53 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import FormError from '../Component/ReservForm/FormError';
+
+
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const LogIn = () => {
+
+
+
+    const {register,handleSubmit,formState:{errors}}=useForm()
+
+    const loginHandler=(data)=>{
+        console.log(data);
+    }
+
+
     return (
         <div className='flex items-center justify-center w-full h-screen overflow-hidden '>
                 <div className='flex flex-col items-center w-full max-w-xl bg-card-slider px-5 pb-20 pt-28 relative'>
                         <h4 className='section-title text-shadow absolute z-10 right-11 -top-6 md:text-5xl md:-top-8'>LogIn</h4>
-                        <form className='flex flex-col items-start gap-14 w-full'>
-                            <div className='flex items-center bg-white w-full border border-gray1 rounded-xl px-3'>
-                                <img src="/images/icon/material-symbols_person-outline-rounded.svg" alt="" />
-                                <input type="text" placeholder='your name' className='form-input'/>
-                            </div>
-                            <div className='flex items-center  bg-white w-full border border-gray1 rounded-xl px-3'>
-                                <img src="/images/icon/ic_outline-email.svg" alt="" />
-                                <input type="text" placeholder='your email' className='form-input'/>
-                            </div>
-                            <button className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300'>LogIn</button>
+                        <form onSubmit={handleSubmit(loginHandler)} className='flex flex-col items-start gap-14 w-full'>
+                                <div className='flex flex-col items-start gap-3 w-full'>
+                                            <div className='flex items-center bg-white w-full border border-gray1 rounded-xl px-3'>
+                                                <img src="/images/icon/material-symbols_person-outline-rounded.svg" alt="" />
+                                                <input id='name' type="text" placeholder='your name' className='form-input' {...register("name",{
+                                                    required:'Please fill in this field',
+                                                    minLength:{value:4,message:'Enter at least 4 characters'}
+                                                    })}/>
+                                            </div>
+
+                                            {errors?.name?.message && <FormError errMessage={errors?.name?.message}/>}
+                                </div>
+
+                                <div className='flex flex-col items-start gap-3 w-full'>
+                                            <div className='flex items-center bg-white w-full border border-gray1 rounded-xl px-3'>
+                                                <img src="/images/icon/ic_outline-email.svg" alt="" />
+                                                <input id='email' type="text" placeholder='your email' className='form-input' {...register("email",{
+                                                    required:'Please fill in this field',
+                                                    pattern:{value:emailRegex,message:'Invalid email address.'}
+                                                    })}/>
+                                            </div>
+                                            {errors?.email?.message && <FormError errMessage={errors?.email?.message}/>}
+                                </div>
+
+
+                                <input type='submit' value='LogIn' className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300 cursor-pointer'/>
                         </form>
 
                         <Link className='absolute top-5 left-7' to='/'>
