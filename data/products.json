@@ -1,9 +1,11 @@
 {
-    "products": [
+    "services": [
       {
+        "id":"cappuccino",
         "productName": "Cappuccino",
+        "type":"type-of-cofe",
         "description": "A rich and creamy cappuccino made with freshly brewed espresso and steamed milk.",
-        "photo": "https://example.com/photos/cappuccino.jpg",
+        "photo": "/images/product/1b18a0fb617b2a74ca210364083c4782.png",
         "price": 4.00,
         "comments": [
           {
@@ -19,9 +21,11 @@
         ]
       },
       {
+        "id":"latte",
         "productName": "Latte",
+        "type":"type-of-cofe",
         "description": "A smooth and velvety latte made with freshly brewed espresso and steamed milk.",
-        "photo": "https://example.com/photos/latte.jpg",
+        "photo": "/images/product/a1e02c7516fafdf48a9f1e33639aea78.png",
         "price": 4.50,
         "comments": [
           {
@@ -37,9 +41,11 @@
         ]
       },
       {
+        "id":"americano",
         "productName": "Americano",
+        "type":"type-of-cofe",
         "description": "A strong and bold Americano made with freshly brewed espresso and hot water.",
-        "photo": "https://example.com/photos/americano.jpg",
+        "photo": "/images/product/ff10151a8fba4a58a1cc43c532721079.png",
         "price": 3.00,
         "comments": [
           {
@@ -55,9 +61,11 @@
         ]
       },
       {
+        "id":"mocha",
         "productName": "Mocha",
+        "type":"type-of-cofe",
         "description": "A rich and chocolatey mocha made with freshly brewed espresso, steamed milk, and chocolate syrup.",
-        "photo": "https://example.com/photos/mocha.jpg",
+        "photo": "/images/product/1b18a0fb617b2a74ca210364083c4782.png",
         "price": 5.00,
         "comments": [
           {
@@ -73,9 +81,11 @@
         ]
       },
       {
+        "id":"matcha-latte",
         "productName": "Matcha Latte",
+        "type":"type-of-cofe",
         "description": "A creamy and refreshing matcha latte made with high-quality matcha powder and steamed milk.",
-        "photo": "https://example.com/photos/matcha_latte.jpg",
+        "photo": "/images/product/a1e02c7516fafdf48a9f1e33639aea78.png",
         "price": 5.50,
         "comments": [
           {
@@ -91,9 +101,11 @@
         ]
       },
       {
+        "id":"chai-tea-latte",
         "productName": "Chai Tea Latte",
+        "type":"type-of-cofe",
         "description": "A spiced chai tea latte made with a blend of black tea, spices, and steamed milk.",
-        "photo": "https://example.com/photos/chai_tea_latte.jpg",
+        "photo": "/images/product/1b18a0fb617b2a74ca210364083c4782.png",
         "price": 4.75,
         "comments": [
           {
@@ -109,9 +121,11 @@
         ]
       },
       {
+        "id":"iced-coffee",
         "productName": "Iced Coffee",
+        "type":"type-of-cofe",
         "description": "A refreshing iced coffee made with freshly brewed coffee and served over ice.",
-        "photo": "https://example.com/photos/iced_coffee.jpg",
+        "photo": "/images/product/a1e02c7516fafdf48a9f1e33639aea78.png",
         "price": 3.50,
         "comments": [
           {
@@ -127,9 +141,11 @@
         ]
       },
       {
+        "id":"hot-chocolate",
         "productName": "Hot Chocolate",
+        "type":"type-of-cofe",
         "description": "A rich and creamy hot chocolate made with high-quality cocoa and steamed milk.",
-        "photo": "https://example.com/photos/hot_chocolate.jpg",
+        "photo": "/images/product/ff10151a8fba4a58a1cc43c532721079.png",
         "price": 4.25,
         "comments": [
           {
@@ -143,13 +159,13 @@
             "date": "2024-05-25"
           }
         ]
-      }
-    ],
-    "cafeEquipment": [
+      },
       {
-        "equipmentName": "Espresso Machine",
+        "id":"espresso-machine",
+        "productName": "Espresso Machine",
+        "type":"equipment",
         "description": "A high-quality espresso machine for making perfect espresso shots.",
-        "photo": "https://example.com/photos/espresso_machine.jpg",
+        "photo": "/images/product/equipmentIMG/espresso-machine.png",
         "price": 1500.00,
         "comments": [
           {
@@ -165,9 +181,11 @@
         ]
       },
       {
-        "equipmentName": "Coffee Grinder",
+        "id":"coffee-grinder",
+        "productName": "Coffee Grinder",
+        "type":"equipment",
         "description": "A precision coffee grinder for freshly ground coffee beans.",
-        "photo": "https://example.com/photos/coffee_grinder.jpg",
+        "photo": "/images/product/equipmentIMG/coffee-grinder.png",
         "price": 200.00,
         "comments": [
           {
@@ -183,9 +201,11 @@
         ]
       },
       {
-        "equipmentName": "Blender",
+        "id":"blender",
+        "productName": "Blender",
+        "type":"equipment",
         "description": "A powerful blender for making smoothies and frappes.",
-        "photo": "https://example.com/photos/blender.jpg",
+        "photo": "/images/product/equipmentIMG/blender.png",
         "price": 300.00,
         "comments": [
           {
@@ -201,9 +221,11 @@
         ]
       },
       {
-        "equipmentName": "Refrigerator",
+        "id":"refrigerator",
+        "productName": "Refrigerator",
+        "type":"equipment",
         "description": "A large refrigerator for storing perishable items.",
-        "photo": "https://example.com/photos/refrigerator.jpg",
+        "photo": "/images/product/equipmentIMG/refrigerator.png",
         "price": 1200.00,
         "comments": [
           {
@@ -219,9 +241,11 @@
         ]
       },
       {
-        "equipmentName": "Oven",
+        "id":"oven",
+        "productName": "Oven",
+        "type":"equipment",
         "description": "A commercial oven for baking and heating food.",
-        "photo": "https://example.com/photos/oven.jpg",
+        "photo": "/images/product/equipmentIMG/oven.png",
         "price": 800.00,
         "comments": [
           {
@@ -237,9 +261,11 @@
         ]
       },
       {
-        "equipmentName": "Dishwasher",
+        "id":"dishwasher",
+        "productName": "Dishwasher",
+        "type":"equipment",
         "description": "An efficient dishwasher for quick and thorough cleaning of dishes.",
-        "photo": "https://example.com/photos/dishwasher.jpg",
+        "photo": "/images/product/equipmentIMG/dishwasher.png",
         "price": 700.00,
         "comments": [
           {
@@ -255,9 +281,11 @@
         ]
       },
       {
-        "equipmentName": "POS System",
+        "id":"pos-system",
+        "productName": "POS System",
+        "type":"equipment",
         "description": "A complete point of sale system for managing orders and payments.",
-        "photo": "https://example.com/photos/pos_system.jpg",
+        "photo": "/images/product/equipmentIMG/POS_System.png",
         "price": 1000.00,
         "comments": [
           {
@@ -273,9 +301,11 @@
         ]
       },
       {
-        "equipmentName": "Ice Maker",
+        "id":"ice-maker",
+        "productName": "Ice Maker",
+        "type":"equipment",
         "description": "An ice maker for providing a constant supply of ice.",
-        "photo": "https://example.com/photos/ice_maker.jpg",
+        "photo": "/images/product/equipmentIMG/Ice_Maker.png",
         "price": 600.00,
         "comments": [
           {
@@ -289,11 +319,11 @@
             "date": "2024-05-25"
           }
         ]
-      }
-    ],
-    "cafePastries": [
+      },
       {
-        "pastryName": "Chocolate Croissant",
+        "id":"chocolate-croissant",
+        "productName": "Chocolate Croissant",
+        "type":"pastry",
         "description": "A flaky croissant filled with rich chocolate.",
         "photo": "https://example.com/photos/chocolate_croissant.jpg",
         "price": 3.50,
@@ -311,7 +341,9 @@
         ]
       },
       {
-        "pastryName": "Blueberry Muffin",
+        "id":"blueberry-muffin",
+        "productName": "Blueberry Muffin",
+        "type":"pastry",
         "description": "A moist muffin bursting with fresh blueberries.",
         "photo": "https://example.com/photos/blueberry_muffin.jpg",
         "price": 2.75,
@@ -329,7 +361,9 @@
         ]
       },
       {
-        "pastryName": "Cinnamon Roll",
+        "id":"cinnamon-roll",
+        "productName": "Cinnamon Roll",
+        "type":"pastry",
         "description": "A soft, gooey roll with a rich cinnamon filling and icing on top.",
         "photo": "https://example.com/photos/cinnamon_roll.jpg",
         "price": 3.00,
@@ -347,7 +381,9 @@
         ]
       },
       {
-        "pastryName": "Lemon Tart",
+        "id":"lemon-tart",
+        "productName": "Lemon Tart",
+        "type":"pastry",
         "description": "A tangy lemon tart with a buttery crust.",
         "photo": "https://example.com/photos/lemon_tart.jpg",
         "price": 4.00,
@@ -365,7 +401,9 @@
         ]
       },
       {
-        "pastryName": "Almond Biscotti",
+        "id":"almond-biscotti",
+        "productName": "Almond Biscotti",
+        "type":"pastry",
         "description": "A crunchy biscotti with a rich almond flavor, perfect for dipping in coffee.",
         "photo": "https://example.com/photos/almond_biscotti.jpg",
         "price": 2.50,

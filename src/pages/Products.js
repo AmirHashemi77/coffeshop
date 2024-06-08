@@ -10,13 +10,13 @@ import List from '../Component/RecommendedSection/List';
 import { servicesArr } from '../utils/servicesArr';
 
 
-
+// import '/public/images/product/equipmentIMG/Ice_Maker.png'
 const products=[
     {
         id:1,
         title:'arabica',
         subTitle:'dark roast',
-        img:'/images/product/1b18a0fb617b2a74ca210364083c4782.png'
+        img:'/images/product/equipmentIMG/espresso-machine.png'
     },
     {
         id:2,
