@@ -19,7 +19,6 @@ const ReservForm = () => {
         console.log(data);
         
     }
-    console.log(errors);
 
     return (
         <div className='w-full relative bg-card-slider2 !rounded-none my-16 md:my-56 '>

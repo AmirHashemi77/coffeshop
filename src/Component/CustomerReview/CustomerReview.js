@@ -73,7 +73,6 @@ const CustomerReview = () => {
         slider.current.classList.remove('overflow-x-hidden')
         setActiveCardIndex((prev)=>prev+1)
         slider.current.scrollBy(slideWidth,0)
-        console.log(slideWidth);
 
         setCustomerReviews((prev)=>{
             return [...prev,prev[addCardAfterNum]];

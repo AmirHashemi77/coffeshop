@@ -6,31 +6,51 @@ import Footer from '../Component/Footer/Footer';
 import ProductDetailsSection from '../Component/ProductDetails/ProductDetailsSection';
 import CommentSection from '../Component/ProductDetails/CommentSection';
 import AddNewComment from '../Component/ProductDetails/AddNewComment';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
+import { getProductDetails } from '../services/getProduct';
+import Error from '../Component/Error';
+import Spinner from '../Component/Spinner/Spinner';
 
 const ProductDetails = () => {
+    const params=useParams()
+  
+
+    const {isLoading , isError,error, data } = useQuery({
+      queryKey: ['productDetails',params?.productid],
+      queryFn:()=>getProductDetails(params?.productid)
+    })
+      const productData=data?.at(0)
     return (
-    <div className='flex flex-col items-center justify-center '>
-        <div className='w-full lg:hidden'>
-             <HeaderSm/>
-        </div>
-        <MenuSm/>
-        <HeaderMd/>
+        <>
+        {isLoading ? <Spinner/> :  
+
+        <div className='flex flex-col items-center justify-center '>
+            <div className='w-full lg:hidden'>
+                  <HeaderSm/>
+            </div>
+            <MenuSm/>
+            <HeaderMd/>
+
+            {isError ? <Error message={error.message} /> : 
+              <div className='flex flex-col items-center gap-16 w-full m-36 px-5'>
+                <ProductDetailsSection image={productData.photo} title={productData.productName} subTitle={productData.description} price={productData.price}/>
+                <CommentSection comments={productData.comments}/>
+                <AddNewComment/>
+              </div> 
+              }
 
 
-        <div className='flex flex-col items-center gap-16 w-full m-36 px-5'>
-          <ProductDetailsSection/>
-          <CommentSection/>
-          <AddNewComment/>
-        </div>
 
 
 
+            <div className="hidden absolute top-28 right-0 rotate-180 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
+            <div className="hidden absolute -bottom-5 left-0 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
+            <Footer/>
+        </div> }
+        </>
+     
 
-
-        <div class="hidden absolute top-28 right-0 rotate-180 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
-        <div class="hidden absolute -bottom-5 left-0 md:block"><img src="/images/icon/bg-cofe.svg" alt=""/></div>
-        <Footer/>
-    </div>
     );
 };
 
