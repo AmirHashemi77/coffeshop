@@ -36,7 +36,7 @@ const ProductDetails = () => {
               <div className='flex flex-col items-center gap-16 w-full m-36 px-5'>
                 <ProductDetailsSection image={productData.photo} title={productData.productName} subTitle={productData.description} price={productData.price}/>
                 <CommentSection comments={productData.comments}/>
-                <AddNewComment/>
+                <AddNewComment productData={productData}/>
               </div> 
               }
 

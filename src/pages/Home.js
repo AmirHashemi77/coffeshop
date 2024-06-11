@@ -23,6 +23,8 @@ import Footer from '../Component/Footer/Footer';
 
 const Home = () => {
 
+  
+
   return (
     <Suspense fallback={<Spinner/>}>
           
@@ -46,7 +48,7 @@ const Home = () => {
                   {/* reserv a table */}
                   <ReservForm/>
                   {/* recommended section */}
-                  <RecommendedSection/>
+                  <RecommendedSection type="recommended"/>
                   {/* popular menu */}
                   <PopularMenu/>
                   {/* our blog */}
