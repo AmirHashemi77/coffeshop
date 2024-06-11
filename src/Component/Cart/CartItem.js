@@ -3,7 +3,7 @@ import NumOfProduct from '../ProductDetails/NumOfProduct';
 
 const CartItem = () => {
     return (
-        <div className='flex items-center justify-between w-full py-4 px-3 border-b border-white border-opacity-20'>
+        <div className='flex flex-col gap-7 items-center justify-center w-full py-4 px-3 border-b border-white border-opacity-20 md2:flex-row md2:justify-between'>
             {/* product img  */}
             <div className='flex items-center justify-center'>
                 <img src="/images/product/1b18a0fb617b2a74ca210364083c4782.png" alt="product" className=' w-20 h-20 object-contain object-center'/>

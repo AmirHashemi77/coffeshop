@@ -1,7 +1,7 @@
 
 
 export const checkUser=async (email)=>{
-    const res=await fetch(`http://localhost:8000/users?email=${email}`)
+    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/users?email=${email}`)
     if(!res.ok){
         throw new Error('some thing is wrong')
     }
@@ -22,7 +22,7 @@ export const checkUser=async (email)=>{
 
 export const signUpHandler =async (userData)=>{
    
-        const postRes=await fetch(`http://localhost:8000/users`,{
+        const postRes=await fetch(`http://coffeshopapi.amirhashemi776.ir/users`,{
             method:'POST',
             body:JSON.stringify(userData),
             headers: {

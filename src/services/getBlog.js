@@ -1,6 +1,6 @@
 export const getBlogs= async ()=>{
     
-    const res=await fetch(`http://localhost:8000/cafeBlog`)
+    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/cafeBlog`)
     if(!res.ok){
         throw new Error('some thing is wrong')
     }
@@ -18,7 +18,7 @@ export const getBlogs= async ()=>{
 
 
 export const getBlogDetails = async (blogId)=>{
-    const res=await fetch(`http://localhost:8000/cafeBlog?id=${blogId}`)
+    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/cafeBlog?id=${blogId}`)
     if(!res.ok){
         throw new Error('some thing is wrong')
     }
