@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormError from '../Component/ReservForm/FormError';
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { checkUser, signUpHandler } from '../services/authHandler';
+import { useMutation} from '@tanstack/react-query';
+import { signUpHandler } from '../services/authHandler';
 import Error from '../Component/Error';
 import { v4 as uuidv4 } from 'uuid';
 import Spinner from '../Component/Spinner/Spinner';
@@ -21,41 +21,27 @@ const phoneNumberRegex= /(0\d{2}-?\d{7,8})|(09\d{2}-?\d{7})|(\+98-\d{2}-?\d{7,8}
 
 
 const SignUp = () => {
-
-
-    const queryClient = useQueryClient();
-
-    const {error:checkError , isError:isCheckError}=useQuery({
-        queryKey:['checkUser'],
-        queryFn:checkUser
-       
-    })
-    const {mutate,isError:signupError,isLoading}=useMutation({
-        mutationKey:[''],
+    const navigate=useNavigate()
+    const {register,handleSubmit,formState:{errors} , reset}=useForm()
+    const {mutate , isError:isSignupError , isLoading , error:signupError }=useMutation({
+        mutationKey:['signup'],
         mutationFn:signUpHandler,
-        onSuccess:()=>{}
+        onSuccess:()=>{
+            alert('Your account is create...')
+            reset()
+            navigate("/login")
+        }
     })
 
-    const {register,handleSubmit,formState:{errors}}=useForm()
-
+    
     const onSignupHandler=async (data)=>{
-        
-        const hasUser=await queryClient.fetchQuery({
-            queryKey:['checkUser'],
-            queryFn:()=>checkUser(data.email)        
-        })
-        
-       
-        if(hasUser.length===0){
             mutate({
                 id:uuidv4(),
                 username:data.name,
                 email:data.email,
                 phone:data.phone
             })
-        }
-       
-       
+            
     }
 
 
@@ -64,7 +50,7 @@ const SignUp = () => {
             {isLoading && <span className='absolute top-10 right-10'><Spinner/></span>}
         <div className='flex flex-col items-center w-full max-w-xl bg-card-slider px-5 pb-20 pt-28 relative'>
                 <h4 className='section-title text-shadow absolute z-10 right-11 -top-6 md:text-5xl md:-top-8'>SignUp</h4>
-                {isCheckError && <Error type='line' message={checkError.message}/>}
+                {isSignupError && <Error type='line' message={signupError.message}/>}
                 <form onSubmit={handleSubmit(onSignupHandler)} className='flex flex-col items-start gap-14 w-full'>
                     <div className='flex flex-col items-start gap-3 w-full'>
                                     <div className='flex items-center bg-white w-full border border-gray1 rounded-xl px-3'>

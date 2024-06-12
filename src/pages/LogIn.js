@@ -1,20 +1,38 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import FormError from '../Component/ReservForm/FormError';
+import { useMutation } from '@tanstack/react-query';
+import { logInHandler } from '../services/authHandler';
+import Error from '../Component/Error';
 
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const LogIn = () => {
+    const navigate=useNavigate()
+    const {register,handleSubmit,formState:{errors},reset}=useForm()
+    const {mutate , error:logInError , isError } = useMutation({
+        mutationKey:['login'],
+        mutationFn:logInHandler,
+        onSuccess:(data)=>{
+            console.log(data);
+            alert('You are logged in .')
+            reset()
+            navigate('/')
+        }
+    })
+  
 
+    
 
-
-    const {register,handleSubmit,formState:{errors}}=useForm()
-
-    const loginHandler=(data)=>{
-        console.log(data);
+    const userLoginHandler=(data)=>{
+       
+        mutate(data)
+        
+        
+        
     }
 
 
@@ -22,7 +40,8 @@ const LogIn = () => {
         <div className='flex items-center justify-center w-full h-screen overflow-hidden '>
                 <div className='flex flex-col items-center w-full max-w-xl bg-card-slider px-5 pb-20 pt-28 relative'>
                         <h4 className='section-title text-shadow absolute z-10 right-11 -top-6 md:text-5xl md:-top-8'>LogIn</h4>
-                        <form onSubmit={handleSubmit(loginHandler)} className='flex flex-col items-start gap-14 w-full'>
+                        {isError && <Error type='line' message={logInError.message}/>}
+                        <form onSubmit={handleSubmit(userLoginHandler)} className='flex flex-col items-start gap-14 w-full'>
                                 <div className='flex flex-col items-start gap-3 w-full'>
                                             <div className='flex items-center bg-white w-full border border-gray1 rounded-xl px-3'>
                                                 <img src="/images/icon/material-symbols_person-outline-rounded.svg" alt="" />

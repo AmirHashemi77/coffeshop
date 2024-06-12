@@ -1,6 +1,10 @@
 export const getBlogs= async ()=>{
     
-    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/cafeBlog`)
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/cafeBlog`,{
+        headers: {
+            "Content-Type": "application/json",
+          }
+    })
     if(!res.ok){
         throw new Error('some thing is wrong')
     }
@@ -18,7 +22,11 @@ export const getBlogs= async ()=>{
 
 
 export const getBlogDetails = async (blogId)=>{
-    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/cafeBlog?id=${blogId}`)
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/cafeBlog?id=${blogId}`,{
+        headers: {
+            "Content-Type": "application/json",
+          }
+    })
     if(!res.ok){
         throw new Error('some thing is wrong')
     }

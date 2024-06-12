@@ -1,41 +1,58 @@
 
 
-export const checkUser=async (email)=>{
-    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/users?email=${email}`)
-    if(!res.ok){
-        throw new Error('some thing is wrong')
-    }
-    const  data=await res.json()
-  
-    // if(data.length > 0){
-    //     throw new Error('Your email or phone number is already registered on the site .')
-    // }
 
-    return data;
-
-}
+export const signUpHandler = async (userData)=>{
 
 
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/users?email=${userData.email}`,{
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        if(!res.ok){
+            throw new Error('some thing is wrong')
+        }
+        const  data=await res.json()
+    
+        if(data.length > 0){
+            throw new Error('Your email or phone number is already registered on the site .')
+        }
 
-
-
-
-export const signUpHandler =async (userData)=>{
    
-        const postRes=await fetch(`http://coffeshopapi.amirhashemi776.ir/users`,{
+        const postRes=await fetch(`https://coffeshopapi.amirhashemi776.ir/users`,{
             method:'POST',
             body:JSON.stringify(userData),
             headers: {
                 'Content-Type': 'application/json'
-              },
+              }
         })
         if(!postRes.ok){
             throw new Error('some thing is wrong')
         }
     
-        const postData=await postRes.json()
-    
       
-        
-        return postData;
+        return data;
+    }
+
+
+
+
+    export const logInHandler = async (logInData)=>{
+
+
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/users?email=${logInData.email}`,{
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+        if(!res.ok){
+            throw new Error('some thing is wrong')
+        }
+        const  data=await res.json()
+    
+        if(data.length === 0){
+            throw new Error('User not found .')
+        }
+      console.log(data);
+        return data;
     }

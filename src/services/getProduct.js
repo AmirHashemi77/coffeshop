@@ -1,7 +1,11 @@
 
 export const getProducts= async (type)=>{
     
-        const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/services?type=${type}`)
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?type=${type}`,{
+            headers: {
+                "Content-Type": "application/json",
+              }
+        })
         if(!res.ok){
             throw new Error('some thing is wrong')
         }
@@ -18,7 +22,11 @@ export const getProducts= async (type)=>{
 
 export const getSliderProducts= async (type)=>{
     
-        const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/services?sliderType=${type}`)
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?sliderType=${type}`,{
+            headers: {
+                "Content-Type": "application/json",
+              }
+        })
         if(!res.ok){
             throw new Error('some thing is wrong')
         }
@@ -37,7 +45,11 @@ export const getSliderProducts= async (type)=>{
 
 
 export const getProductDetails = async (productId)=>{
-    const res=await fetch(`http://coffeshopapi.amirhashemi776.ir/services?id=${productId}`)
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?id=${productId}`,{
+        headers: {
+            "Content-Type": "application/json",
+          }
+    })
     if(!res.ok){
         throw new Error('some thing is wrong')
     }
@@ -52,12 +64,12 @@ export const getProductDetails = async (productId)=>{
 
 export const postComment = async ({productId,newComments})=>{
 
-    const postRes=await fetch(`http://coffeshopapi.amirhashemi776.ir/services/${productId}`,{
+    const postRes=await fetch(`https://coffeshopapi.amirhashemi776.ir/services/${productId}`,{
         method:'PATCH',
         body:JSON.stringify(newComments),
         headers: {
             'Content-Type': 'application/json'
-          },
+          }
     })
     if(!postRes.ok){
         throw new Error('some thing is wrong')
