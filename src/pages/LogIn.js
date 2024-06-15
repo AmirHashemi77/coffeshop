@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import FormError from '../Component/ReservForm/FormError';
 import { useMutation } from '@tanstack/react-query';
 import { logInHandler } from '../services/authHandler';
 import Error from '../Component/Error';
+import { authContext } from '../context/AuthContext';
 
 
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const LogIn = () => {
+    const { setIsLogIn , setUser } = useContext(authContext)
     const navigate=useNavigate()
     const {register,handleSubmit,formState:{errors},reset}=useForm()
     const {mutate , error:logInError , isError } = useMutation({
         mutationKey:['login'],
         mutationFn:logInHandler,
         onSuccess:(data)=>{
-            console.log(data);
+            setUser(data[0])
+            setIsLogIn(true)
             alert('You are logged in .')
             reset()
             navigate('/')
@@ -27,12 +30,8 @@ const LogIn = () => {
 
     
 
-    const userLoginHandler=(data)=>{
-       
+    const userLoginHandler=(data)=>{  
         mutate(data)
-        
-        
-        
     }
 
 

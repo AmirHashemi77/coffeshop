@@ -6,6 +6,7 @@ import App from './App';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BrowserRouter } from 'react-router-dom';
+import AuthContextProvider from './context/AuthContext';
 AOS.init({
     once:true
 })
@@ -14,7 +15,9 @@ AOS.init({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <App />   
+     <AuthContextProvider>
+      <App />   
+     </AuthContextProvider>
   </BrowserRouter>
 
 );

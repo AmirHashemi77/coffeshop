@@ -4,6 +4,7 @@ import AccountIcon from '../../../icons/AccountIcon';
 import MenuIcon from '../../../icons/MenuIcon';
 import { uiContext } from '../../../context/UiContext';
 import { Link } from 'react-router-dom';
+import UserSetting from './UserSetting';
 
 const HeaderSm = () => {
     
@@ -22,10 +23,7 @@ const HeaderSm = () => {
                 <div className='flex items-center gap-2'>
                     <div className='flex items-center justify-center relative' onMouseEnter={()=>uiCtx?.setOpenRegisterMenu(true)} onMouseLeave={()=>uiCtx.setOpenRegisterMenu(false)}>
                         <span className='cursor-pointer'><AccountIcon/></span>
-                    {uiCtx.isopenRegisterMenu && <div className='flex flex-col items-start absolute top-full z-30 right-3/4 bg-[#6c493cf7] py-3 px-5 shadow-xl rounded-lg'>
-                            <Link className='text-lg text-brown1 hover:opacity-75 duration-200 ' to='/signup'>SignUp</Link>
-                            <Link className='text-lg text-brown1 hover:opacity-75 duration-200 ' to='/login'>LogIn</Link>
-                        </div>}
+                    {uiCtx.isopenRegisterMenu && <UserSetting/>}
                     </div>
                     <Link to='/cart'>
                         <CartIcon/>
