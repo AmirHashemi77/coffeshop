@@ -1,7 +1,54 @@
-import React from 'react';
+import React, { useContext, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import NumOfProduct from './NumOfProduct';
+import { authContext } from '../../context/AuthContext';
+import { useMutation } from '@tanstack/react-query';
+import { editCartHandler } from '../../services/cartHandler';
 
-const ProductDetailsSection = ({image,title,subTitle,price}) => {
+const ProductDetailsSection = ({image,title,subTitle,price,id}) => {
+    const [number,setNumber]=useState(1);
+    const {user}=useContext(authContext)
+    const {error , isError , mutate} = useMutation({
+        mutationKey:['cartEdit'],
+        mutationFn:editCartHandler,
+        onSuccess:()=>{
+            alert("cart updated")
+        }
+    })
+    const firstUpdate = useRef(true);
+    useLayoutEffect(() => {
+        if (firstUpdate.current) {
+            firstUpdate.current = false;
+            return;
+          }
+
+          const newCart=[...user.cart,{
+            id:id,
+            title:title,
+            price:price,
+            image:image,
+            number:number
+        }]
+
+        mutate({newCartData:newCart , userId:user.id})
+
+          
+    },[number])
+      
+
+
+    const AddToCartHandler=()=>{
+        const newCart=[...user.cart,{
+            id:id,
+            title:title,
+            price:price,
+            image:image,
+            number:1
+        }]
+
+        mutate({newCartData:newCart , userId:user.id})
+    }
+
+   
     return (
         <div className='flex flex-col justify-between items-center w-full max-w-5xl bg-card-slider p-5 md:flex-row-reverse'>
         {/* product image  */}
@@ -29,11 +76,11 @@ const ProductDetailsSection = ({image,title,subTitle,price}) => {
                         </h2>
                         <span className='text-white text-2xl font-leiko leading-8 text-center lg:text-3xl capitalize opacity-40'>{`${price} $`}</span>
                     </div>
-                   <NumOfProduct/>
+                   <NumOfProduct number={number} setNumber={setNumber}/>
                 </div>
 
 
-                <button className='flex items-center justify-center rounded-lg bg-[#22151884] w-full my-6 p-4 text-brown1 hover:bg-[#221518c0] duration-300'>Add to cart</button>
+                <button onClick={AddToCartHandler} className='flex items-center justify-center rounded-lg bg-[#22151884] w-full my-6 p-4 text-brown1 hover:bg-[#221518c0] duration-300'>Add to cart</button>
         </div>
     </div>
     );

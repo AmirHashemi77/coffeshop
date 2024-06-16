@@ -34,7 +34,7 @@ const ProductDetails = () => {
 
             {isError ? <Error message={error.message} /> : 
               <div className='flex flex-col items-center gap-16 w-full m-36 px-5'>
-                <ProductDetailsSection image={productData.photo} title={productData.productName} subTitle={productData.description} price={productData.price}/>
+                <ProductDetailsSection image={productData.photo} id={productData.id} title={productData.productName} subTitle={productData.description} price={productData.price}/>
                 <CommentSection comments={productData.comments}/>
                 <AddNewComment productData={productData}/>
               </div> 

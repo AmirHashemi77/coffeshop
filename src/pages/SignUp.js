@@ -39,7 +39,8 @@ const SignUp = () => {
                 id:uuidv4(),
                 username:data.name,
                 email:data.email,
-                phone:data.phone
+                phone:data.phone,
+                cart:[]
             })
             
     }

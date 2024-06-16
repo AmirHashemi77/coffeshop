@@ -17,7 +17,7 @@ const UserSetting = () => {
 
                     {
                         isLogIn ?   <>
-                                        <p className='text-lg text-brown1 hover:opacity-75 duration-200 cursor-pointer whitespace-nowrap'>{user?.userName}</p>
+                                        <p className='text-lg text-brown1 hover:opacity-75 duration-200 cursor-pointer whitespace-nowrap'>{user?.username}</p>
                                         <button onClick={logOutHandler} className='text-lg text-brown1 hover:opacity-75 duration-200'>LogOut</button>  
                                     </>
 

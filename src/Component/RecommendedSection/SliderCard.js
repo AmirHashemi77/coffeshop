@@ -1,6 +1,6 @@
+
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-
 const SliderCard = ({imgurl,title,price,cardWidth,id}) => {
     const cardEl=useRef();
     useEffect(()=>{
@@ -18,9 +18,9 @@ const SliderCard = ({imgurl,title,price,cardWidth,id}) => {
                 <div className='absolute top-5 left-0'>
                     <img src="/images/icon/ph_info.svg" alt="" />
                 </div>
-                <div className='absolute bottom-3 right-0'>
+                <Link to={`/product/${id}`} className='absolute bottom-3 right-0'>
                     <img src="/images/icon/ph_shopping-cart-simple-thin.svg" alt="" />
-                </div>
+                </Link>
             </div>
             <Link to={`/product/${id}`} className='product-slider-card-bottom'>
                 <p className='text-white text-base font-normal'>{title}</p>
