@@ -347,7 +347,7 @@
       "type": "pastry",
       "sliderType": "",
       "description": "A flaky croissant filled with rich chocolate.",
-      "photo": "https://example.com/photos/chocolate_croissant.jpg",
+      "photo": "/images/product/pastry/chocolate-croissant.png",
       "price": 3.5,
       "comments": [
         {
@@ -368,7 +368,7 @@
       "type": "pastry",
       "sliderType": "",
       "description": "A moist muffin bursting with fresh blueberries.",
-      "photo": "https://example.com/photos/blueberry_muffin.jpg",
+      "photo": "/images/product/pastry/blueberry-muffin.png",
       "price": 2.75,
       "comments": [
         {
@@ -389,7 +389,7 @@
       "type": "pastry",
       "sliderType": "",
       "description": "A soft, gooey roll with a rich cinnamon filling and icing on top.",
-      "photo": "https://example.com/photos/cinnamon_roll.jpg",
+      "photo": "/images/product/pastry/cinnamon-roll.png",
       "price": 3,
       "comments": [
         {
@@ -410,7 +410,7 @@
       "type": "pastry",
       "sliderType": "",
       "description": "A tangy lemon tart with a buttery crust.",
-      "photo": "https://example.com/photos/lemon_tart.jpg",
+      "photo": "/images/product/pastry/lemon-tart.png",
       "price": 4,
       "comments": [
         {
@@ -431,7 +431,7 @@
       "type": "pastry",
       "sliderType": "",
       "description": "A crunchy biscotti with a rich almond flavor, perfect for dipping in coffee.",
-      "photo": "https://example.com/photos/almond_biscotti.jpg",
+      "photo": "/images/product/pastry/almond-biscotti.png",
       "price": 2.5,
       "comments": [
         {
@@ -445,7 +445,154 @@
           "date": "2024-05-10"
         }
       ]
+    },
+
+
+    {
+      "id":"ham-sandwich",
+      "productName": "Classic Ham Sandwich",
+      "type":"take-a-way",
+      "description": "A delicious ham sandwich with fresh lettuce, tomatoes, and mayo, served on whole grain bread.",
+      "photo": "/images/product/takeAway/ham-sandwich.png",
+      "price": 5.50,
+      "comments": [
+        {
+          "name": "Alice Johnson",
+          "commentContent": "The best ham sandwich I've ever had!",
+          "date": "2024-06-01"
+        },
+        {
+          "name": "John Smith",
+          "commentContent": "Fresh and tasty. Highly recommended.",
+          "date": "2024-06-02"
+        }
+      ]
+    },
+    {
+      "id":"caesar-salad",
+      "productName": "Caesar Salad",
+      "type":"take-a-way",
+      "description": "A classic Caesar salad with fresh romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+      "photo": "/images/product/takeAway/caesar-salad.png",
+      "price": 7.00,
+      "comments": [
+        {
+          "name": "Emily Davis",
+          "commentContent": "Crisp and refreshing. Perfect for lunch.",
+          "date": "2024-06-03"
+        },
+        {
+          "name": "Michael Brown",
+          "commentContent": "Delicious and healthy. Will order again.",
+          "date": "2024-06-04"
+        }
+      ]
+    },
+    {
+      "id":"chicken-wrap",
+      "productName": "Chicken Wrap",
+      "type":"take-a-way",
+      "description": "A savory chicken wrap with grilled chicken, lettuce, tomatoes, and a tangy ranch dressing.",
+      "photo": "/images/product/takeAway/chicken-wrap.png",
+      "price": 6.50,
+      "comments": [
+        {
+          "name": "Sarah Wilson",
+          "commentContent": "Great flavor and very filling.",
+          "date": "2024-06-05"
+        },
+        {
+          "name": "David Martinez",
+          "commentContent": "The perfect lunch option. Loved it!",
+          "date": "2024-06-06"
+        }
+      ]
+    },
+    {
+      "id":"veggie-burger",
+      "productName": "Veggie Burger",
+      "type":"take-a-way",
+      "description": "A delicious veggie burger with a black bean patty, lettuce, tomatoes, and avocado, served on a whole wheat bun.",
+      "photo": "/images/product/takeAway/veggie-burger.png",
+      "price": 8.00,
+      "comments": [
+        {
+          "name": "Olivia Garcia",
+          "commentContent": "Best veggie burger I've ever tasted!",
+          "date": "2024-06-07"
+        },
+        {
+          "name": "James Lee",
+          "commentContent": "Healthy and delicious. Highly recommend.",
+          "date": "2024-06-08"
+        }
+      ]
+    },
+    {
+      "id":"fruit-smoothie",
+      "productName": "Fruit Smoothie",
+      "type":"take-a-way",
+      "description": "A refreshing fruit smoothie made with a blend of strawberries, bananas, and orange juice.",
+      "photo": "/images/product/takeAway/fruit-smoothie.png",
+      "price": 4.50,
+      "comments": [
+        {
+          "name": "Sophia Hernandez",
+          "commentContent": "Perfectly refreshing and sweet.",
+          "date": "2024-06-09"
+        },
+        {
+          "name": "Daniel Walker",
+          "commentContent": "Great way to start the day. Loved it!",
+          "date": "2024-06-10"
+        }
+      ]
+    },
+    {
+      "id":"chocolate-chip-cookie",
+      "productName": "Chocolate Chip Cookie",
+      "type":"take-a-way",
+      "description": "A classic chocolate chip cookie with a soft and chewy center and crispy edges.",
+      "photo": "/images/product/takeAway/chocolate-chip-cookie.png",
+      "price": 1.50,
+      "comments": [
+        {
+          "name": "Charlotte Gonzalez",
+          "commentContent": "Absolutely delicious. Just like homemade!",
+          "date": "2024-06-11"
+        },
+        {
+          "name": "Ethan Martinez",
+          "commentContent": "Perfect with a cup of coffee.",
+          "date": "2024-06-12"
+        }
+      ]
+    },
+    {
+      "id":"iced-latte",
+      "productName": "Iced Latte",
+      "type":"take-a-way",
+      "description": "A refreshing iced latte made with freshly brewed espresso and chilled milk.",
+      "photo": "/images/product/takeAway/iced-latte.png",
+      "price": 3.75,
+      "comments": [
+        {
+          "name": "Amelia Walker",
+          "commentContent": "Perfectly chilled and delicious.",
+          "date": "2024-06-13"
+        },
+        {
+          "name": "William Robinson",
+          "commentContent": "Great way to cool down in the afternoon.",
+          "date": "2024-06-14"
+        }
+      ]
     }
+   
+
+
+
+    
   ],
   "cafeBlog": [
     {
@@ -491,30 +638,5 @@
       "content": "Hello, home baristas! In today's blog, we're sharing our top tips for making cafe-quality coffee at home. Whether you're using a drip coffee maker, a French press, or an espresso machine, we have expert advice to help you elevate your home brewing game. Start with fresh, high-quality beans and invest in a good grinder to ensure a consistent grind size. Pay attention to the water quality and temperature, as these factors can greatly impact the taste of your coffee. We'll also cover the importance of proper equipment maintenance and cleaning to keep your brews tasting fresh. With these tips, you can enjoy a professional-quality coffee experience without leaving your home. Happy brewing!"
     }
   ],
-  "users": [
-    {
-      "id": "1",
-      "userName": "alireza",
-      "email": "ali555@gmail.com",
-      "phone": "09125129200"
-    },
-    {
-      "id": "2",
-      "userName": "امیر هاشمی",
-      "email": "amirhosseinhashemi776@gmail.com",
-      "phone": "09373537042"
-    },
-    {
-      "id": "6034902a-e32c-4f76-b8c7-06edfebf02d4",
-      "username": "امیر هاشمی",
-      "email": "amirhi776@gmail.com",
-      "phone": "09373537042"
-    },
-    {
-      "id": "6e775638-a58f-4d68-b91a-f4869fe6ef1e",
-      "username": "امیر هاشمی",
-      "email": "amrhi776@gmail.com",
-      "phone": "09373537042"
-    }
-  ]
+  "users": []
 }
