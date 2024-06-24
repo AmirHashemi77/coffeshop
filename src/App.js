@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { authContext } from './context/AuthContext';
 import Spinner from './Component/Spinner/Spinner';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
 const Home = React.lazy(() => import('./pages/Home'));
 const Products = React.lazy(() => import('./pages/Products'));
@@ -23,12 +24,16 @@ const App = () => {
   const {isLogIn} = useContext(authContext)
   const queryClient = new QueryClient({
     defaultOptions:{
-      staleTime:0
-    }
+      queries:{
+        staleTime:5000,
+        gcTime:10000
+      }
+    },
   })
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools/>
           <Suspense fallback={<Spinner/>}>
             <UiContextProvider>
               <Routes>
@@ -40,8 +45,8 @@ const App = () => {
                 <Route path='/blogs/:blogid' element={<BlogDetails/>}  />
                 <Route path='/aboutus' element={<AboutUs/>}  />
                 <Route path='/Cart' element={isLogIn ? <Cart/> : <AuthErr/>}  />
-                <Route path='/login' element={<LogIn/>}  />
-                <Route path='/signup' element={<SignUp/>}  />
+                <Route path='/login' element={isLogIn ? <Navigate to="/"/> : <LogIn/>}  />
+                <Route path='/signup' element={isLogIn ? <Navigate to="/"/> : <SignUp/>}  />
                 <Route path='*' element={<NotFound/>}  />
               </Routes>
             </UiContextProvider>

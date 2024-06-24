@@ -7,7 +7,7 @@ const UserSetting = () => {
 
 
     const logOutHandler = ()=>{
-        alert(`${user.userName} is LogOut .`);
+        alert(`${user.username} is LogOut .`);
         setUser(null);
         setIsLogIn(false);
     }

@@ -23,7 +23,7 @@ const phoneNumberRegex= /(0\d{2}-?\d{7,8})|(09\d{2}-?\d{7})|(\+98-\d{2}-?\d{7,8}
 const SignUp = () => {
     const navigate=useNavigate()
     const {register,handleSubmit,formState:{errors} , reset}=useForm()
-    const {mutate , isError:isSignupError , isLoading , error:signupError }=useMutation({
+    const {mutate , isError:isSignupError , isPending , error:signupError }=useMutation({
         mutationKey:['signup'],
         mutationFn:signUpHandler,
         onSuccess:()=>{
@@ -48,7 +48,6 @@ const SignUp = () => {
 
     return (
         <div className='flex items-center justify-center w-full h-screen overflow-hidden relative'>
-            {isLoading && <span className='absolute top-10 right-10'><Spinner/></span>}
         <div className='flex flex-col items-center w-full max-w-xl bg-card-slider px-5 pb-20 pt-28 relative'>
                 <h4 className='section-title text-shadow absolute z-10 right-11 -top-6 md:text-5xl md:-top-8'>SignUp</h4>
                 {isSignupError && <Error type='line' message={signupError.message}/>}
@@ -92,8 +91,8 @@ const SignUp = () => {
                                 {errors?.email?.message && <FormError errMessage={errors?.email?.message}/>}
                     </div>
 
-
-                    <input type='submit' value='SignUp' className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300 cursor-pointer'/>
+                    
+                    <input type='submit' disabled={isPending} value={isPending ? "Loading..." : 'SignUp'} className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300 cursor-pointer'/>
                 </form>
 
                 <Link className='absolute top-5 left-7' to='/'>

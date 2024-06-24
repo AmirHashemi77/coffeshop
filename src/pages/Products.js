@@ -22,16 +22,16 @@ const Products = () => {
     const params=useParams()
   
 
-  const {isLoading , isError,error, data:products } = useQuery({
+  const {isPending , isError,error, data:products } = useQuery({
     queryKey: ['products',params?.productcategory],
-    queryFn:()=>getProducts(params?.productcategory)
+    queryFn:getProducts
   })
 
     return (
         <>
 
 
-            {isLoading ? <Spinner/> : 
+            {isPending ? <Spinner/> : 
                         <div className='flex flex-col items-center justify-center '>
                             <div className='w-full lg:hidden'>
                                     <HeaderSm/>
@@ -62,8 +62,8 @@ const Products = () => {
                                                 </ul>
                                             </SideBarContainer>
                                                 
-                                                {isError ? <Error message={error.message} /> :                               
-                                                    <List type='products'>
+                                                {isError && <Error message={error.message} />} :                              
+                                                  { !isError && products && <List type='products'>
                                                     {
                                                         products?.map((item)=>(
                                                             <SliderCard key={item.id} id={item.id} imgurl={item.photo} title={item.productName} subTitle={item.subTitle} price={`${item.price}$`}/>

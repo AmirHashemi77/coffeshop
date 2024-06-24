@@ -1,7 +1,7 @@
 
-export const getProducts= async (type)=>{
+export const getProducts= async ({queryKey})=>{
     
-        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?type=${type}`,{
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?type=${queryKey[1]}`,{
             headers: {
                 "Content-Type": "application/json",
               }
@@ -20,9 +20,9 @@ export const getProducts= async (type)=>{
 }
 
 
-export const getSliderProducts= async (type)=>{
+export const getSliderProducts= async ({queryKey})=>{
     
-        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?sliderType=${type}`,{
+        const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?sliderType=${queryKey[1]}`,{
             headers: {
                 "Content-Type": "application/json",
               }
@@ -44,8 +44,8 @@ export const getSliderProducts= async (type)=>{
 
 
 
-export const getProductDetails = async (productId)=>{
-    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?id=${productId}`,{
+export const getProductDetails = async ({queryKey})=>{
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/services?id=${queryKey[1]}`,{
         headers: {
             "Content-Type": "application/json",
           }

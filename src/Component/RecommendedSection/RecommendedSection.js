@@ -9,8 +9,8 @@ const RecommendedSection = ({type}) => {
 
 
   const { isError, data:products } = useQuery({
-    queryKey: ['productsSlider'],
-    queryFn:()=>getSliderProducts("recommended")
+    queryKey: ['products',type],
+    queryFn:getSliderProducts
   })
 
     

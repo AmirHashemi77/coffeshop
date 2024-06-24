@@ -21,8 +21,8 @@ export const getBlogs= async ()=>{
 
 
 
-export const getBlogDetails = async (blogId)=>{
-    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/cafeBlog?id=${blogId}`,{
+export const getBlogDetails = async ({queryKey})=>{
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/cafeBlog?id=${queryKey[1]}`,{
         headers: {
             "Content-Type": "application/json",
           }

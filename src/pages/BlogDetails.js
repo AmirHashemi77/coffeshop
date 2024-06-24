@@ -14,9 +14,9 @@ const BlogDetails = () => {
     const params=useParams()
   
 
-    const {isLoading , isError,error, data } = useQuery({
+    const {isPending , isError,error, data } = useQuery({
       queryKey: ['blogDetails',params?.blogid],
-      queryFn:()=>getBlogDetails(params?.blogid)
+      queryFn:getBlogDetails
     })
 
     const blogData=data?.at(0)
@@ -24,7 +24,7 @@ const BlogDetails = () => {
     return (
         <>
             {
-                isLoading ? <Spinner/> : 
+                isPending ? <Spinner/> : 
                             <div className='flex flex-col items-center justify-center '>
                             <div className='w-full lg:hidden'>
                                 <HeaderSm/>
