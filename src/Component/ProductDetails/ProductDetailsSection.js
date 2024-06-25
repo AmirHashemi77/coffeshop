@@ -10,54 +10,63 @@ import { authContext } from "../../context/AuthContext";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { editCartHandler } from "../../services/cartHandler";
 import { useNavigate } from "react-router-dom";
+import useFetchUser from "../../hooks/useFetchUser";
+import { cartContext } from "../../context/CartContext";
 
 const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
-    const { user } = useContext(authContext);
-  const [number, setNumber] = useState(1);
-  const client = useQueryClient();
-  const [showNumberUi, setShowNumberUi] = useState(false);
+  const { user , isLogIn } = useContext(authContext);
+  const { cart, setCart } = useContext(cartContext);
+  console.log(cart);
+  const currentItem=cart && cart.find((item)=>item.id===id)
   const { error, isError, mutate } = useMutation({
     mutationKey: ["cartEdit"],
     mutationFn: editCartHandler,
     onSuccess: () => {
       alert("cart updated");
-      setShowNumberUi(true);
-      client.refetchQueries(["userData"]);
     },
-  });
-  const firstUpdate = useRef(true);
-  useLayoutEffect(() => {
-    if (firstUpdate.current) {
-      firstUpdate.current = false;
-      return;
+    onMutate:(data)=>{
+     setCart(data.newCartData)
     }
+  });
 
-    const newCart = [
-      ...user.cart,
-      {
-        id: id,
-        title: title,
-        image: image,
-        number: number,
-        price: price,
-        totalPrice: price * number,
-      },
-    ];
 
-    mutate({ newCartData: newCart, userId: user.id });
-  }, [number]);
+  // const firstUpdate = useRef(true);
+  // useLayoutEffect(() => {
+  //   if (firstUpdate.current) {
+  //     firstUpdate.current = false;
+  //     return;
+  //   }
+  //   console.log(cart);
+  //   const newCart = [
+  //     ...cart,
+  //     {
+  //       id: id,
+  //       title: title,
+  //       image: image,
+  //       number: number,
+  //       price: price,
+  //       totalPrice: price * number,
+  //     },
+  //   ];
+
+  //   mutate({ newCartData: newCart, userId: user.id });
+  // }, [number]);
+
+
+
+
 
   const AddToCartHandler = () => {
     if (user) {
       const newCart = [
-        ...user.cart,
+        ...cart,
         {
           id: id,
           title: title,
           image: image,
-          number: number,
+          number: 1,
           price: price,
-          totalPrice: Number(price) * Number(number),
+          totalPrice: Number(price) ,
         },
       ];
 
@@ -66,6 +75,11 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
       alert("Please SignUp or LogIn to your account");
     }
   };
+
+
+
+
+
 
   return (
     <div className="flex flex-col justify-between items-center w-full max-w-5xl bg-card-slider p-5 md:flex-row-reverse">
@@ -101,17 +115,19 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
             </h2>
             <span className="text-white text-2xl font-leiko leading-8 text-center lg:text-3xl capitalize opacity-40">{`${price} $`}</span>
           </div>
-          {showNumberUi && (
-            <NumOfProduct number={number} setNumber={setNumber} />
+          {currentItem && (
+            <NumOfProduct userId={user.id} productId={id}/>
           )}
         </div>
 
-        {!showNumberUi && <button
-          onClick={AddToCartHandler}
-          className="flex items-center justify-center rounded-lg bg-[#22151884] w-full my-6 p-4 text-brown1 hover:bg-[#221518c0] duration-300"
-        >
-          Add to cart
-        </button>}
+        {!currentItem && (
+          <button
+            onClick={AddToCartHandler}
+            className="flex items-center justify-center rounded-lg bg-[#22151884] w-full my-6 p-4 text-brown1 hover:bg-[#221518c0] duration-300"
+          >
+            Add to cart
+          </button>
+        )}
       </div>
     </div>
   );

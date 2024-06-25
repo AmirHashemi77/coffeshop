@@ -17,9 +17,12 @@ export const editCartHandler = async ({newCartData , userId})=>{
 
 }
 
-export const fetchCartHandler = async (userId)=>{
 
-    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/users/${userId}`,{
+
+
+export const fetchCartHandler = async ({queryKey})=>{
+
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/users/${queryKey[1]}`,{
         method:'GET',
         headers: {
             'Content-Type': 'application/json'

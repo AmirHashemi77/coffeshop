@@ -15,11 +15,24 @@ import Spinner from "../Component/Spinner/Spinner";
 const ProductDetails = () => {
   const params = useParams();
 
+
+
+  
   const { isLoading, isError, error, data } = useQuery({
     queryKey: ["productDetails", params?.productid],
     queryFn: getProductDetails,
   });
+
+
+
+
+
+
+
   const productData = data?.at(0);
+
+
+
   return (
     <>
       {isLoading ? (

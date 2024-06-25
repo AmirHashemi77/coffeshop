@@ -13,7 +13,7 @@ const UserSetting = () => {
     }
     
     return (
-                <div className='flex flex-col items-start absolute top-full right-3/4 bg-[#6c493cbe] py-3 px-5 shadow-xl rounded-lg'>
+                <div className='flex flex-col items-start absolute top-full right-3/4 bg-[#6c493cbe] py-3 px-5 shadow-xl rounded-lg z-30'>
 
                     {
                         isLogIn ?   <>

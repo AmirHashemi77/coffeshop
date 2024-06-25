@@ -6,6 +6,7 @@ import { useMutation } from '@tanstack/react-query';
 import { logInHandler } from '../services/authHandler';
 import Error from '../Component/Error';
 import { authContext } from '../context/AuthContext';
+import { cartContext } from '../context/CartContext';
 
 
 
@@ -13,17 +14,19 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const LogIn = () => {
     const { setIsLogIn , setUser } = useContext(authContext)
+    const { setCart } = useContext(cartContext)
     const navigate=useNavigate()
     const {register,handleSubmit,formState:{errors},reset}=useForm()
-    const {mutate , error:logInError , isError } = useMutation({
+    const {mutate , error:logInError , isError , isPending } = useMutation({
         mutationKey:['login'],
         mutationFn:logInHandler,
         onSuccess:(data)=>{
             setUser(data[0])
+            setCart(data[0].cart)
             setIsLogIn(true)
             alert('You are logged in .')
             reset()
-            navigate('/')
+            // navigate('/')
         }
     })
   
@@ -65,7 +68,7 @@ const LogIn = () => {
                                 </div>
 
 
-                                <input type='submit' value='LogIn' className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300 cursor-pointer'/>
+                                <input type='submit' disabled={isPending} value={isPending ? 'Loading' : 'LogIn'} className='flex items-center justify-center rounded-2xl bg-[#22151884] w-full px-3 py-4 text-xl capitalize text-brown1 hover:bg-[#221518d6] duration-300 cursor-pointer'/>
                         </form>
 
                         <Link className='absolute top-5 left-7' to='/'>

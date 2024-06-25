@@ -115,7 +115,8 @@ const CustomerReview = () => {
                 <h4 className='section-title font-dancingScript font-bold capitalize absolute left-1/2 -top-10 -translate-x-1/2 md:text-6xl'>Customer Review</h4>
                 <div ref={slider} className='customer-slider pt-40 relative bottom-0 overflow-y-hidden overflow-x-hidden'>
                   {customerReviews.map((item,index)=>(
-                    <ReviewItem id={index+1} auther={item.auther} comment={item.comment} img={item.img} activeIndex={activeCardIndex}/>
+                    
+                    <ReviewItem key={index+1} id={index+1} auther={item.auther} comment={item.comment} img={item.img} activeIndex={activeCardIndex}/>
                   ))}
                 </div>
                     {/* buttons */}

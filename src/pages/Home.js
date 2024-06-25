@@ -16,36 +16,10 @@ import OurBlog from "../Component/OurBlog/OurBlog";
 import CustomerReview from "../Component/CustomerReview/CustomerReview";
 import EmailSection from "../Component/EmailInput/EmailSection";
 import Footer from "../Component/Footer/Footer";
-import { authContext } from "../context/AuthContext";
-import { useQuery } from "@tanstack/react-query";
+
 
 const Home = () => {
-  const { user, setUser } = useContext(authContext);
-
-  const { data } = useQuery({
-    queryKey: ["userData"],
-
-    queryFn: async () => {
-      const res = await fetch(
-        `https://coffeshopapi.amirhashemi776.ir/users?email=${user.email}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      if (!res.ok) {
-        throw new Error("some thing is wrong");
-      }
-      const data = await res.json();
-      setUser(data);
-      console.log('updated cart');
-      return data;
-    },
-
-    enabled: false,
-    gcTime:Infinity
-  });
+ 
 
   return (
     <Suspense fallback={<Spinner />}>
