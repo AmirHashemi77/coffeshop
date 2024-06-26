@@ -1,8 +1,41 @@
 import React, { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { authContext } from "../../context/AuthContext";
+import { toast } from "react-toastify";
+import { clearCartHandler } from "../../services/cartHandler";
 
 const BillSection = () => {
-  const { cartTotalPrice , tax , packing , payable}=useContext(cartContext)
+  const queryClient=useQueryClient()
+  const { cartTotalPrice , tax , packing , payable ,setCart ,cart}=useContext(cartContext)
+  const {user,isLogIn} = useContext(authContext)
+  const {mutate , isPending}= useMutation({
+    mutationKey:['clearCart',user?.id],
+    mutationFn:clearCartHandler,
+    onMutate:()=>{
+      const oldCart=cart
+      setCart([])
+
+      return oldCart;
+    },
+    onSuccess:()=>{
+      toast("Your order has been registered .")
+      queryClient.invalidateQueries({queryKey:["fetchCart", user.id]})
+    },
+    onError:(error, v, context)=>{
+     setCart(context)
+     toast(error)
+    }
+  })
+
+  const cartSubmitHandler = ()=>{
+    if(isLogIn){
+
+      mutate(user?.id)
+    }
+  }
+
+
  
   return (
     <>
@@ -41,8 +74,8 @@ const BillSection = () => {
           {`${payable} $`}
           </p>
         </div>
-        <button className="flex items-center justify-center rounded-2xl bg-[#22151884] w-full p-4 text-brown1 hover:bg-[#221518d6] duration-300">
-          Submit
+        <button onClick={cartSubmitHandler} className="flex items-center justify-center rounded-2xl bg-[#22151884] w-full p-4 text-brown1 hover:bg-[#221518d6] duration-300">
+          { isPending ? 'Loading...' :'Submit'}
         </button>
       </div>
     </>

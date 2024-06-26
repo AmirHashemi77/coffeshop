@@ -34,7 +34,7 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <ToastContainer
         position="top-center"
-        autoClose={2000}
+        autoClose={900}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

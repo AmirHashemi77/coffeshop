@@ -38,3 +38,23 @@ export const fetchCartHandler = async ({queryKey})=>{
     return data.cart;
 
 }
+
+
+
+
+
+export const clearCartHandler = async (userId)=>{
+
+    const res=await fetch(`https://coffeshopapi.amirhashemi776.ir/users/${userId}`,{
+        method:'PATCH',
+        body:JSON.stringify({cart:[]}),
+        headers: {
+            'Content-Type': 'application/json'
+          }
+    })
+    if(!res.ok){
+        throw new Error('some thing is wrong')
+    }
+
+}
+
