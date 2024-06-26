@@ -4,17 +4,18 @@ import { authContext } from "../../context/AuthContext";
 import { useMutation } from "@tanstack/react-query";
 import { editCartHandler } from "../../services/cartHandler";
 import { cartContext } from "../../context/CartContext";
+import { toast } from "react-toastify";
 
 const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
   const { user } = useContext(authContext);
   const { cart, setCart } = useContext(cartContext);
-  console.log(cart);
+
   const currentItem = cart && cart.find((item) => item.id === id);
   const { mutate } = useMutation({
     mutationKey: ["cartEdit"],
     mutationFn: editCartHandler,
     onSuccess: () => {
-      alert("cart updated");
+      toast("Cart Updated.");
     },
     onMutate: (data) => {
       setCart(data.newCartData);
@@ -75,7 +76,7 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
             </h2>
             <span className="text-white text-2xl font-leiko leading-8 text-center lg:text-3xl capitalize opacity-40">{`${price} $`}</span>
           </div>
-          {currentItem && <NumOfProduct userId={user.id} productId={id} />}
+          {currentItem && <NumOfProduct userId={user?.id} productId={id} />}
         </div>
 
         {!currentItem && (

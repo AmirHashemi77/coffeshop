@@ -1,4 +1,4 @@
-import React, { Suspense, useContext } from "react";
+import React, { Suspense } from "react";
 import Spinner from "../Component/Spinner/Spinner";
 import HeaderSm from "../Component/Header&Hero/Header/HeaderSm";
 import HeroSm from "../Component/Header&Hero/Hero/HeroSm";

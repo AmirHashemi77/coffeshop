@@ -2,8 +2,6 @@ import React, { useCallback, useRef } from "react";
 import BlogItem from "./BlogItem";
 import { useQuery } from "@tanstack/react-query";
 import { getBlogs } from "../../services/getBlog";
-import Spinner from "../Spinner/Spinner";
-import Error from "../Error";
 
 const OurBlog = ({ title }) => {
   const slider = useRef();

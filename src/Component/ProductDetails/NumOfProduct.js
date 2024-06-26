@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { editCartHandler } from "../../services/cartHandler";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 
 const NumOfProduct = ({ styles, userId, productId }) => {
   const queryClient = useQueryClient();
@@ -12,7 +13,7 @@ const NumOfProduct = ({ styles, userId, productId }) => {
     mutationFn: editCartHandler,
     onSuccess: () => {
       queryClient.invalidateQueries(["fetchCart"]);
-      alert("cart updated");
+      toast("Cart Updated.");
     },
     onMutate: (data) => {
       const oldCart = cart;

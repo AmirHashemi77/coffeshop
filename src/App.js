@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { authContext } from "./context/AuthContext";
 import Spinner from "./Component/Spinner/Spinner";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Slide, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = React.lazy(() => import("./pages/Home"));
 const Products = React.lazy(() => import("./pages/Products"));
@@ -33,6 +35,20 @@ const App = () => {
   }, [user?.cart]);
   return (
     <QueryClientProvider client={queryClient}>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Slide}
+        progressStyle={{backgroundColor:"#4a2721d9"}}
+      />
       <ReactQueryDevtools />
       <Suspense fallback={<Spinner />}>
         <UiContextProvider>

@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import { authContext } from '../../../context/AuthContext';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UserSetting = () => {
     const {isLogIn , user , setUser , setIsLogIn} = useContext(authContext)
 
 
     const logOutHandler = ()=>{
-        alert(`${user.username} is LogOut .`);
+        toast(`${user.username} is LogOut .`);
         setUser(null);
         setIsLogIn(false);
     }

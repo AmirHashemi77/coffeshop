@@ -1,19 +1,19 @@
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import FormError from "../Component/ReservForm/FormError";
 import { useMutation } from "@tanstack/react-query";
 import { logInHandler } from "../services/authHandler";
 import Error from "../Component/Error";
 import { authContext } from "../context/AuthContext";
 import { cartContext } from "../context/CartContext";
+import { toast } from "react-toastify";
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 const LogIn = () => {
   const { setIsLogIn, setUser } = useContext(authContext);
   const { setCart } = useContext(cartContext);
-  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -32,7 +32,7 @@ const LogIn = () => {
       setUser(data[0]);
       setCart(data[0].cart);
       setIsLogIn(true);
-      alert("You are logged in .");
+      toast('You are Logged In.');
       reset();
       // navigate('/')
     },

@@ -6,7 +6,7 @@ import { useMutation} from '@tanstack/react-query';
 import { signUpHandler } from '../services/authHandler';
 import Error from '../Component/Error';
 import { v4 as uuidv4 } from 'uuid';
-import Spinner from '../Component/Spinner/Spinner';
+import { toast } from 'react-toastify';
 
 
 
@@ -27,7 +27,7 @@ const SignUp = () => {
         mutationKey:['signup'],
         mutationFn:signUpHandler,
         onSuccess:()=>{
-            alert('Your account is create...')
+            toast("Your account is create...");
             reset()
             navigate("/login")
         }

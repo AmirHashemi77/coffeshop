@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCartHandler } from "../services/cartHandler";
 import { authContext } from "../context/AuthContext";
 import Spinner from "../Component/Spinner/Spinner";
+import Error from "../Component/Error";
 
 const Cart = () => {
   const { user } = useContext(authContext);
@@ -24,6 +25,7 @@ const Cart = () => {
       </div>
       <MenuSm />
       <HeaderMd />
+      {isError && <Error message={error}/>}
       {isLoading && !isError && <Spinner />}
       {!isLoading && !isError && (
         <div className="flex flex-col items-center gap-16 w-full m-36">
