@@ -2,16 +2,21 @@ import React, { useContext } from 'react';
 import { authContext } from '../../../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { cartContext } from '../../../context/CartContext';
 
 const UserSetting = () => {
     const {isLogIn , user , setUser , setIsLogIn} = useContext(authContext)
+    const {setCart} = useContext(cartContext)
 
 
     const logOutHandler = ()=>{
         toast(`${user.username} is LogOut .`);
         setUser(null);
         setIsLogIn(false);
+        setCart([])
+
     }
+
     
     return (
                 <div className='flex flex-col items-start absolute top-full right-3/4 bg-[#6c493cbe] py-3 px-5 shadow-xl rounded-lg z-30'>

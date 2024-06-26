@@ -4,18 +4,19 @@ export const cartContext = createContext();
 
 const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
+  const cartTotalPriceArr = cart.map((item) => item.totalPrice);
   const cartTotalPrice =
     cart.length === 0
       ? 0
-      : cart.length === 1
-      ? Number(cart[0].totalPrice)
-      : cart.reduce((prev, current) => Number(prev.totalPrice) + Number(current.totalPrice));
-console.log(cartTotalPrice);
-      const tax= (cartTotalPrice * 5) / 100
-      const packing= (cartTotalPrice * 2) / 100
+      : cartTotalPriceArr.reduce(
+          (total, prev) => Number(total) + Number(prev),
+          0
+        );
 
-      const payable = cartTotalPrice + tax + packing
+  const tax = (cartTotalPrice * 5) / 100;
+  const packing = (cartTotalPrice * 2) / 100;
+
+  const payable = Number(cartTotalPrice + tax + packing).toFixed(2);
 
   return (
     <cartContext.Provider
@@ -25,7 +26,7 @@ console.log(cartTotalPrice);
         cartTotalPrice,
         tax,
         packing,
-        payable
+        payable,
       }}
     >
       {children}

@@ -24,7 +24,6 @@ const useFetchUser = () => {
           }
           const data = await res.json();
           setUser(data[0]);
-          console.log('okkkkkkkkk');
           return data;
         
       }

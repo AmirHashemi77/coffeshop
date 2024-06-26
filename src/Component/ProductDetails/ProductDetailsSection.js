@@ -7,7 +7,7 @@ import { cartContext } from "../../context/CartContext";
 import { toast } from "react-toastify";
 
 const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
-  const { user } = useContext(authContext);
+  const { user} = useContext(authContext);
   const { cart, setCart } = useContext(cartContext);
 
   const currentItem = cart && cart.find((item) => item.id === id);
@@ -38,7 +38,7 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
 
       mutate({ newCartData: newCart, userId: user.id });
     } else {
-      alert("Please SignUp or LogIn to your account");
+      toast("Please SignUp or LogIn to your account");
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { Suspense, useContext, useEffect } from "react";
+import React, { Suspense, useContext } from "react";
 import UiContextProvider from "./context/UiContext";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -30,14 +30,11 @@ const App = () => {
       },
     },
   });
-  useEffect(() => {
-    console.log(user?.cart);
-  }, [user?.cart]);
   return (
     <QueryClientProvider client={queryClient}>
       <ToastContainer
         position="top-center"
-        autoClose={5000}
+        autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
