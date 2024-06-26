@@ -4,7 +4,6 @@ import { authContext } from "../../context/AuthContext";
 
 const CartItem = ({ imgUrl, title, price, id, number }) => {
   const { user } = useContext(authContext);
-  
 
   return (
     <div className="flex flex-col gap-7 items-center justify-center w-full py-4 px-3 border-b border-white border-opacity-20 md:grid md:grid-cols-9 md:gap-3">
@@ -20,9 +19,13 @@ const CartItem = ({ imgUrl, title, price, id, number }) => {
         </span>
       </div>
       {/* num of product  */}
-      <NumOfProduct userId={user.id} productId={id} styles='col-start-6 col-end-8' />
+      <NumOfProduct
+        userId={user.id}
+        productId={id}
+        styles="col-start-6 col-end-8"
+      />
       {/* price  */}
-      <p  className="text-white text-xl font-leiko leading-8 text-center lg:text-2xl capitalize opacity-90 col-start-8 col-end-10">{`${price}$`}</p>
+      <p className="text-white text-xl font-leiko leading-8 text-center lg:text-2xl capitalize opacity-90 col-start-8 col-end-10">{`${price}$`}</p>
     </div>
   );
 };

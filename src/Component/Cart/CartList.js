@@ -6,7 +6,7 @@ const CartList = ({ cartItems }) => {
   return (
     <div className="flex flex-col items-center w-full max-w-4xl ">
       {cartItems.length === 0 ? (
-        <Error message={'Empty Cart'} type="line"/>
+        <Error message={"Empty Cart"} type="line" />
       ) : (
         cartItems?.map((item) => (
           <CartItem

@@ -1,60 +1,25 @@
-import React, {
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, { useContext } from "react";
 import NumOfProduct from "./NumOfProduct";
 import { authContext } from "../../context/AuthContext";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 import { editCartHandler } from "../../services/cartHandler";
-import { useNavigate } from "react-router-dom";
-import useFetchUser from "../../hooks/useFetchUser";
 import { cartContext } from "../../context/CartContext";
 
 const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
-  const { user , isLogIn } = useContext(authContext);
+  const { user } = useContext(authContext);
   const { cart, setCart } = useContext(cartContext);
   console.log(cart);
-  const currentItem=cart && cart.find((item)=>item.id===id)
-  const { error, isError, mutate } = useMutation({
+  const currentItem = cart && cart.find((item) => item.id === id);
+  const { mutate } = useMutation({
     mutationKey: ["cartEdit"],
     mutationFn: editCartHandler,
     onSuccess: () => {
       alert("cart updated");
     },
-    onMutate:(data)=>{
-     setCart(data.newCartData)
-    }
+    onMutate: (data) => {
+      setCart(data.newCartData);
+    },
   });
-
-
-  // const firstUpdate = useRef(true);
-  // useLayoutEffect(() => {
-  //   if (firstUpdate.current) {
-  //     firstUpdate.current = false;
-  //     return;
-  //   }
-  //   console.log(cart);
-  //   const newCart = [
-  //     ...cart,
-  //     {
-  //       id: id,
-  //       title: title,
-  //       image: image,
-  //       number: number,
-  //       price: price,
-  //       totalPrice: price * number,
-  //     },
-  //   ];
-
-  //   mutate({ newCartData: newCart, userId: user.id });
-  // }, [number]);
-
-
-
-
 
   const AddToCartHandler = () => {
     if (user) {
@@ -66,7 +31,7 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
           image: image,
           number: 1,
           price: price,
-          totalPrice: Number(price) ,
+          totalPrice: Number(price),
         },
       ];
 
@@ -75,11 +40,6 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
       alert("Please SignUp or LogIn to your account");
     }
   };
-
-
-
-
-
 
   return (
     <div className="flex flex-col justify-between items-center w-full max-w-5xl bg-card-slider p-5 md:flex-row-reverse">
@@ -115,9 +75,7 @@ const ProductDetailsSection = ({ image, title, subTitle, price, id }) => {
             </h2>
             <span className="text-white text-2xl font-leiko leading-8 text-center lg:text-3xl capitalize opacity-40">{`${price} $`}</span>
           </div>
-          {currentItem && (
-            <NumOfProduct userId={user.id} productId={id}/>
-          )}
+          {currentItem && <NumOfProduct userId={user.id} productId={id} />}
         </div>
 
         {!currentItem && (

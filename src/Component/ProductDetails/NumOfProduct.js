@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { cartContext } from "../../context/CartContext";
 import { editCartHandler } from "../../services/cartHandler";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useEffect } from "react";
 
 const NumOfProduct = ({ styles, userId, productId }) => {
   const queryClient = useQueryClient();
@@ -21,19 +20,31 @@ const NumOfProduct = ({ styles, userId, productId }) => {
       if (data.type === "inc") {
         setCart((prev) =>
           prev.map((item) =>
-            item.id === productId ? { ...item, number: item.number + 1 } : item
+            item.id === productId
+              ? {
+                  ...item,
+                  number: item.number + 1,
+                  totalPrice: (Number(item.number) + 1) * item.price,
+                }
+              : item
           )
         );
       }
       if (data.type === "dec") {
         setCart((prev) =>
           prev.map((item) =>
-            item.id === productId ? { ...item, number: item.number - 1 } : item
+            item.id === productId
+              ? {
+                  ...item,
+                  number: item.number - 1,
+                  totalPrice: (Number(item.number) - 1) * item.price,
+                }
+              : item
           )
         );
       }
       if (data.type === "del") {
-        setCart((prev) => prev.filter((item) => item.id != productId));
+        setCart((prev) => prev.filter((item) => item.id !== productId));
       }
 
       return oldCart;
@@ -45,19 +56,31 @@ const NumOfProduct = ({ styles, userId, productId }) => {
 
   const increaseHandler = () => {
     const newCart = cart.map((item) =>
-      item.id === productId ? { ...item, number: item.number + 1 } : item
+      item.id === productId
+        ? {
+            ...item,
+            number: item.number + 1,
+            totalPrice: (Number(item.number) + 1) * item.price,
+          }
+        : item
     );
 
     mutate({ newCartData: newCart, userId: userId, type: "inc" });
   };
   const decreaseHandler = () => {
     if (currentItem.number === 1) {
-      const newCart = cart.filter((item) => item.id != productId);
+      const newCart = cart.filter((item) => item.id !== productId);
       mutate({ newCartData: newCart, userId: userId, type: "del" });
       return;
     } else {
       const newCart = cart.map((item) =>
-        item.id === productId ? { ...item, number: item.number - 1 } : item
+        item.id === productId
+          ? {
+              ...item,
+              number: item.number - 1,
+              totalPrice: (Number(item.number) - 1) * item.price,
+            }
+          : item
       );
       mutate({ newCartData: newCart, userId: userId, type: "dec" });
     }
